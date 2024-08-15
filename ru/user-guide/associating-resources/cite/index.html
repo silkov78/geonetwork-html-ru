@@ -1950,9 +1950,9 @@
 <h1 id="cite">Описание ссылки на другой ресурс</h1>
 <p>Каталог может обеспечить автоматическое описание ссылки на другой ресурс на основе информации, предоставленной в записи метаданных.</p>
 <p><img alt="" src="../../../../user-guide/associating-resources/img/citation.png" /></p>
-<p>Описание ссылки можно использовать для цитирования набора данных в публикациях.</p>
+<p>Описание ссылки можно использовать для описания данных в публикациях.</p>
 <h2 id="_1">Текст описания ссылки</h2>
-<p>По умолчанию цитата генерируется в соответствии с общими правилами описания наборов данных, но может быть настроена.</p>
+<p>По умолчанию Описание ссылки генерируется в соответствии с общими правилами описания наборов данных, но может быть настроена.</p>
 <p>По умолчанию это: * список авторов (и организации) * год публикации * название * список издательства * URL DOI или URL целевой страницы.</p>
 <p>Это данные, необходимые для создания DOI (Digital Object Identifier - Идентификатор цифрового объекта) (см. <a href="../doi/">Идентификатор цифрового объекта (DOI)</a>).</p>
 <p>Настроить описании ссылки можно в <code>schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/formatter/citation/common.xsl</code>.</p>
@@ -1963,7 +1963,7 @@
 <p>Описание ссылки может отображаться или не отображаться в представлении записи. Проверьте конфигурацию пользовательского интерфейса, чтобы настроить его:</p>
 <p><img alt="" src="../../../../user-guide/associating-resources/img/citation-ui-config.png" /></p>
 <h2 id="_3">Формат</h2>
-<p>Цитаты могут быть представлены в различных форматах:</p>
+<p>Описание ссылки могут быть представлены в различных форматах:</p>
 <ul>
 <li>HTML</li>
 <li>простой текст</li>
@@ -1971,7 +1971,7 @@
 <li>BibTex</li>
 </ul>
 <h2 id="api">API</h2>
-<p>Цитату можно отобразить в стандартном XSL-форматере, используемом для полного представления, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true">http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true</a></p>
+<p>Описание ссылки можно отобразить в стандартном XSL-форматере, используемом для полного представления, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true">http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true</a></p>
 <p>Доступ к форматеру, создающему цитату, можно получить напрямую, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=ris">http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=ris</a></p>
 <p>Для получения списка доступных форматов используйте: <a href="http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=">http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=</a>?</p>
 
