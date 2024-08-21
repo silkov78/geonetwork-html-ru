@@ -24,7 +24,7 @@
     
     
       
-        <title>WFS GetFeature Harvesting - GeoNetwork (RU)</title>
+        <title>Сбор метаданных с WFS-сервера - GeoNetwork (RU)</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WFS GetFeature Harvesting
+              Сбор метаданных с WFS-сервера
             
           </span>
         </div>
@@ -1143,8 +1143,6 @@
       
         
       
-        
-      
     
     
       
@@ -1418,7 +1416,7 @@
           
   
   <span class="md-ellipsis">
-    WFS GetFeature Harvesting
+    Сбор метаданных с WFS-сервера
   </span>
   
 
@@ -1429,7 +1427,7 @@
         
   
   <span class="md-ellipsis">
-    WFS GetFeature Harvesting
+    Сбор метаданных с WFS-сервера
   </span>
   
 
@@ -1490,27 +1488,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../user-guide/harvesting/harvesting-z3950.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    None
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2039,7 +2016,7 @@
   
 
 
-<h1 id="getfeature_harvester">WFS GetFeature Harvesting</h1>
+<h1 id="getfeature_harvester">Сбор метаданных с WFS-сервера</h1>
 <p>Метаданные могут присутствовать в таблицах реляционных баз данных, которые часто используются многими организациями. Использование протокола WFS поверх реляционной базы данных позволит извлекать метаданные с помощью стандартных механизмов запроса. Этот тип сбора данных позволяет пользователю задать запрос GetFeature и занести информацию из WFS-объектов, которую можно связать или скопировать в шаблон для создания записей метаданных.</p>
 <h2 id="wfs-">Добавление WFS-сборщика</h2>
 <p>WFS реализует операцию запроса GetFeature, которая возвращает данные в виде объектов (обычно строк из таблиц в реляционной базе данных). GeoNetwork, действуя в качестве клиента, может прочитать ответ GetFeature и применить XLST-преобразование для создания фрагментов метаданных, которые можно связать или скопировать в предоставленный пользователем шаблон для создания записей метаданных.
