@@ -24,7 +24,7 @@
     
     
       
-        <title>Exporting records - GeoNetwork (RU)</title>
+        <title>Экспорт записей метаданных - GeoNetwork (RU)</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exporting records
+              Экспорт записей метаданных
             
           </span>
         </div>
@@ -1197,7 +1197,7 @@
           
   
   <span class="md-ellipsis">
-    Exporting records
+    Экспорт записей метаданных
   </span>
   
 
@@ -1208,7 +1208,7 @@
         
   
   <span class="md-ellipsis">
-    Exporting records
+    Экспорт записей метаданных
   </span>
   
 
@@ -1230,18 +1230,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#export-as-a-zip-archive" class="md-nav__link">
+  <a href="#zip-" class="md-nav__link">
     <span class="md-ellipsis">
-      Export as a ZIP archive
+      Экспорт в виде ZIP-архива
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#export-as-a-csv-file" class="md-nav__link">
+  <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
-      Export as a CSV file
+      Экспорт в виде файла CSV
     </span>
   </a>
   
@@ -1684,18 +1684,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#export-as-a-zip-archive" class="md-nav__link">
+  <a href="#zip-" class="md-nav__link">
     <span class="md-ellipsis">
-      Export as a ZIP archive
+      Экспорт в виде ZIP-архива
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#export-as-a-csv-file" class="md-nav__link">
+  <a href="#csv" class="md-nav__link">
     <span class="md-ellipsis">
-      Export as a CSV file
+      Экспорт в виде файла CSV
     </span>
   </a>
   
@@ -1716,7 +1716,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/export/index.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/export/index.ru.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1725,53 +1725,53 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/export/index.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/export/index.ru.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="export">Exporting records</h1>
-<p>GeoNetwork has three different export options to export metadata. They operate on selected sets of metadata from the search results. As such they are accessible from the "actions on selection" menu as shown in the following example:</p>
+<h1 id="export">Экспорт записей метаданных</h1>
+<p>В GeoNetwork есть 2 основных варианта экспорта метаданных:  в виде ZIP-архива и в виде файла CSV. Они работают с выбранными наборами метаданных из результатов поиска. Они доступны из меню "действия при выборе", как показано в следующем примере:</p>
 <p><img alt="" src="../../../user-guide/export/img/export.png" /></p>
-<h2 id="export-as-a-zip-archive">Export as a ZIP archive</h2>
-<p>When a selected set of metadata records is exported as a ZIP archive, each metadata record is inserted in the ZIP archive as a directory containing the metadata, any data uploaded with the metadata record and the thumbnails. This type of ZIP archive is the MEF (Metadata Exchange Format) Version 2.0. You can find more details of MEF V2 in the GeoNetwork Developers Manual.</p>
-<h2 id="export-as-a-csv-file">Export as a CSV file</h2>
-<p>When a selected set of metadata records is exported as a CSV/TXT file, the following process takes place for each metadata record:</p>
+<h2 id="zip-">Экспорт в виде ZIP-архива</h2>
+<p>Когда выбранный набор записей метаданных экспортируется в виде ZIP-архива, каждая запись метаданных вставляется в ZIP-архив в виде директории. В директории содержаться метаданные, зависимости метаданных и их аватар-фотографии (миниатюры). Этот тип ZIP-архива представляет собой формат MEF (Metadata Exchange Format) версии 2.0. Более подробную информацию о MEF V2 вы можете найти в руководстве для разработчиков GeoNetwork.</p>
+<h2 id="csv">Экспорт в виде файла CSV</h2>
+<p>Когда выбранный набор записей метаданных экспортируется в виде файла CSV/TXT, для каждой записи метаданных выполняется следующий процесс:</p>
 <ul>
-<li>a brief summary of some of the elements from each selected metadata record is generated by applying the brief template from the metadata schema. The main folder of the different available schema is <code>GEONETWORK_DATA_DIR/config/schema_plugins/</code>. In particular, for an iso19115-3.2018 it is located here: <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19115-3.2018/layout/tpl-csv.xsl</code></li>
-<li>the elements common to the brief summary elements for all metadata records are extracted (as they may differ according to the metadata schema)</li>
-<li>a title record with comma separated element names is created</li>
-<li>the content of each element is laid out in comma separated form. Where there is more than one child element in the brief element (eg. for geoBox), the content from each child element is separated using '###'.</li>
+<li>создаётся краткое описание некоторых элементов из каждой выбранной записи метаданных генерируется путем применения шаблона из схемы метаданных. Папкой по умолчанию для любой схемы является "GEONETWORK_DATA_DIR/config/schema_plugins/`. В частности, для iso19115-3.2018 он находится здесь: "GEONETWORK_DATA_DIR/config/schema_plugins/iso19115-3.2018/layout/tpl-csv.xsl".</li>
+<li>извлекаются элементы, общие для всех элементов в кратком описании для всех записей метаданных (поскольку они могут отличаться в зависимости от схемы метаданных)</li>
+<li>создается запись заголовка с именами элементов, разделенными запятыми</li>
+<li>содержимое каждого элемента отображается в виде, разделенном запятыми. Если в кратком элементе содержится более одного дочернего элемента (например, для geoBox) содержимое каждого дочернего элемента разделяется с помощью '###'.</li>
 </ul>
-<p>An example of an ISO metadata record in CSV format is shown as follows:</p>
+<p>Ниже показан пример записи метаданных ISO в формате CSV:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;schema&quot;,&quot;uuid&quot;,&quot;id&quot;,&quot;title&quot;,&quot;metadatacreationdate&quot;,&quot;geoBox&quot;
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;iso19115-3.2018&quot;,&quot;27b5f8b8-053a-11ea-aa46-02000a08f492&quot;,&quot;1312&quot;,&quot;S2A_MSIL1C_20161218T102432_N0204_R065_T32TMS_20161218T102606&quot;,&quot;2019-11-12T10:49:52,&quot;7.691141905380134###9.128266945124432###45.958258688896564###46.95363733424615&quot;
 </span></code></pre></div>
-<p>It is possible to override the brief summary of metadata elements by creating a special template in the presentation XSLT of the metadata schema. As an example of how to do this, we will override the brief summary for the iso19115-3.2018 schema and replace it with other possible useful information.</p>
-<p>In the case of iso19115-3.2018 there are the two files to be modified:</p>
+<p>Можно переопределить краткое описание элементов метаданных, создав специальный шаблон в XSLT-формате для схемы метаданных. В качестве примера, можно переопределить краткое описание схемы iso 19115-3.2018 и заменить его другой полезной информацией.</p>
+<p>В случае стандарта iso 19115-3.2018 необходимо изменить два файла:</p>
 <ol>
-<li>geonetwork/WEB-INF/data/config/schema_plugins/iso19115-3.2018/layout/tpl-csv.xsl</li>
+<li>geonetwork/WEB-INF/data/config/schema_plugins/iso 19115-3.2018/макет/tpl-csv.xsl</li>
 <li>geonetwork/xslt/services/csv/csv-search.xsl</li>
 </ol>
-<p>For example, to export the following elements:</p>
+<p>Например, для экспорта следующих элементов:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&quot;uuid&quot;,&quot;title&quot;,&quot;cloud_coverage_percentage&quot;,&quot;category&quot;,&quot;date-creation&quot;
 </span></code></pre></div>
-<p>in the first file, it is necessary to proceed as in the following:</p>
+<p>в первом файле нужно сделать следующее:</p>
 <ul>
 <li>
-<p>to comment the elements <code>id, title, abstract</code> except</p>
+<p>закомментировать идентификатор элемента (id), заголовок (title), аннотацию (abstract), кроме</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;uuid&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;gn:info/uuid&quot;</span><span class="nt">/&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">&lt;/uuid&gt;</span>
 </span></code></pre></div>
 </li>
 <li>
-<p>to add a similar line in between the abstract and category elements:</p>
+<p>чтобы добавить аналогичную строку между элементами аннотации и категории:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;myfield&gt;</span>myfieldvalue<span class="nt">&lt;/myfield&gt;</span>
 </span></code></pre></div>
-<p>For example:</p>
+<p>Например:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;title&gt;</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">   </span><span class="nt">&lt;xsl:copy-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;mdb:identificationInfo/*/mri:citation/*/cit:title&quot;</span><span class="nt">/&gt;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">&lt;/title&gt;</span>
@@ -1784,17 +1784,17 @@
 </span></code></pre></div>
 </li>
 </ul>
-<p>About cloud coverage percentage, in particular, please remember to add the namespace if missing:</p>
+<p>Что касается процента облачного покрытия (cloud_coverage_percentage), необходимо добавить пространство имен, если оно отсутствует:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>xmlns:mrc=&quot;http://standards.iso.org/iso/19115/-3/mrc/2.0&quot;
 </span></code></pre></div>
-<p>If not interested in other information, please comment all other lines except:</p>
+<p>Нужно прокомментировать все остальные строки, если не интересует другая информация, кроме:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;xsl:copy-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;gn:info&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
-<p>because it is used to sort results by schema.</p>
-<p>About the second file, <em>csv-search.xsl</em>, to avoid printing automatically the 3 columns:</p>
+<p>так как она используется для сортировки результатов по схеме.</p>
+<p>Во втором файле, <em>csv-search.xsl</em>, чтобы избежать автоматической печати трех столбцов:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&quot;schema&quot;,&quot;uuid&quot;,&quot;id&quot;,
 </span></code></pre></div>
-<p>you have to comment the following lines:</p>
+<p>стоит закомментировать следующие строки:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&lt;xsl:text&gt;</span>&quot;schema&quot;<span class="nt">&lt;/xsl:text&gt;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$sep&quot;</span><span class="nt">/&gt;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nt">&lt;xsl:text&gt;</span>&quot;uuid&quot;<span class="nt">&lt;/xsl:text&gt;</span>
@@ -1802,12 +1802,12 @@
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nt">&lt;xsl:text&gt;</span>&quot;id&quot;<span class="nt">&lt;/xsl:text&gt;</span>
 </span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$sep&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
-<p>and</p>
+<p>и</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;concat(&#39;&amp;quot;&#39;, $metadata/geonet:info/schema, &#39;&amp;quot;&#39;, $sep,</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="s">&#39;&amp;quot;&#39;, $metadata/geonet:info/uuid, &#39;&amp;quot;&#39;, $sep,</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="s">&#39;&amp;quot;&#39;, $metadata/geonet:info/id, &#39;&amp;quot;&#39;, $sep)&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
-<p>These changes will create the desired output:</p>
+<p>Эти изменения приведут к желаемому результату:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&quot;uuid&quot;,&quot;title&quot;,&quot;cloud_coverage_percentage&quot;,&quot;category&quot;,&quot;date-creation&quot;
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>&quot;c94da70e-066e-11ea-aa22-02000a08f492&quot;,&quot;S2A_MSIL1C_20180320T101021_N0206_R022_T33TUM_20180320T122057&quot;,&quot;36.0368&quot;,&quot;dataset&quot;,&quot;2018-03-20T12:20:57&quot;,
 </span></code></pre></div>
