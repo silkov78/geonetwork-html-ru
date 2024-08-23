@@ -16,7 +16,7 @@
         <link rel="prev" href="../map/">
       
       
-        <link rel="next" href="creating-metadata/">
+        <link rel="next" href="managing-templates/">
       
       
       <link rel="icon" href="../../../assets/images/geonetwork-logo.png">
@@ -814,7 +814,7 @@
               
   
   <span class="md-ellipsis">
-    Работа с записями метаданных
+    Описание информации
   </span>
   
 
@@ -830,10 +830,31 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            Работа с записями метаданных
+            Описание информации
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="managing-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Управление шаблонами
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -848,48 +869,6 @@
   
   <span class="md-ellipsis">
     Создание записи метаданных
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="deleting-metadata/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Удаление записи метаданных
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="editing-metadata/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Редактирование метаданных
   </span>
   
 
@@ -927,11 +906,11 @@
   
   
     <li class="md-nav__item">
-      <a href="inspire-editing/" class="md-nav__link">
+      <a href="editing-metadata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Создание записей согласно директиве INSPIRE
+    Редактирование метаданных
   </span>
   
 
@@ -948,11 +927,11 @@
   
   
     <li class="md-nav__item">
-      <a href="managing-templates/" class="md-nav__link">
+      <a href="deleting-metadata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Управление шаблонами
+    Удаление записи метаданных
   </span>
   
 
@@ -974,6 +953,27 @@
   
   <span class="md-ellipsis">
     Многоязычное редактирование
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inspire-editing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Создание записей согласно директиве INSPIRE
   </span>
   
 
@@ -1403,7 +1403,7 @@
       
   
   <span class="md-ellipsis">
-    Administration
+    Администрирование
   </span>
   
 
@@ -1813,33 +1813,33 @@
 
 
 <h1 id="_1">Работа с записями метаданных</h1>
-<p>В этом разделе описывается процесс 'Работа с записями метаданных (создание, импорт, редактирование, удаление и др.). Прежде всего, пользователю необходимо выбрать стандарт, согласно которому будет создана запись метаданных. Стандарт определяет структуру записи и содержающую информацию в ней. В общем случае отдаётся предпочтение следующим 3-м стандартам:</p>
+<p>В этом разделе описывается процесс ведения каталога ресурсов (создание, импорт, редактирование, удаление и др.). Прежде всего, пользователю необходимо выбрать стандарт, согласно которому будет создана запись метаданных. Стандарт определяет структуру записи и информацию в ней. В общем случае отдаётся предпочтение следующим 3-м стандартам:</p>
 <ul>
-<li><a href="https://dublincore.org/">Dublin core</a> обычно используется для записей метаданных, ссылающихся на порталы открытых данных, публикации, отчеты, ...</li>
-<li><a href="https://www.iso.org/iso/en/home/store/catalogue_tc/catalogue_detail.htm?csnumber=32557">ISO 19115/119/139</a> используется для пространственных ресурсов (например, наборов данных, сервисов, карт)</li>
+<li><a href="https://dublincore.org/">Dublin core</a> обычно используется для записей метаданных, ссылающихся на порталы открытых данных, публикации, отчеты (описываемые ресурсы не обязательно географические).</li>
+<li><a href="https://www.iso.org/iso/en/home/store/catalogue_tc/catalogue_detail.htm?csnumber=32557">ISO 19115/119/139</a> используются для пространственных ресурсов (например для наборов геоданных, сервисов, карт).</li>
 <li><a href="https://www.iso.org/iso/en/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39965">ISO 19110</a> используется для таблиц атрибутов характеристик.</li>
 </ul>
-<p>Форма в редакторе записи обеспечивает загрузку данных, графики, документов, pdf-файлов и любого другого типа контента. Она поддерживает:</p>
+<p>Форма редактора обеспечивает загрузку данных, графики, документов, pdf-файлов и любого другого типа контента. Она поддерживает:</p>
 <ul>
 <li>полная стандартная поддержка</li>
-<li>многоязычное редактирование метаданных,</li>
-<li>система валидации,</li>
+<li>многоязычное редактирование метаданных</li>
+<li>система валидации (проверки) метаданных</li>
 <li>система предложений для улучшения качества метаданных</li>
-<li>геопубликация слоев для публикации слоев геоданных в сервисах OGC (например, GeoServer)</li>
+<li>публикация геоданных на сервисах OGC (например GeoServer)</li>
 </ul>
-<div class="admonition информация">
+<div class="admonition info">
 <p class="admonition-title">Структура раздела</p>
 <ul>
 <li><a href="managing-templates/">Управление шаблонами</a></li>
 <li><a href="creating-metadata/">Создание новой записи</a></li>
-<li><a href="importing-metadata/">Импорт новой записи</a></li>
 <li><a href="editing-metadata/">Редактирование метаданных</a></li>
+<li><a href="importing-metadata/">Импорт новой записи</a></li>
 <li><a href="deleting-metadata/">Удаление записи</a></li>
 <li><a href="multilingual-editing/">Многоязычное редактирование</a></li>
 <li><a href="inspire-editing/">Описание ресурсов для директивы INSPIRE</a></li>
 </ul>
 </div>
-<p>На основе профилей пользователей (см. <a href="../../administrator-guide/managing-users-and-groups/creating-user/">Создание пользователя</a>), приборная панель обеспечивает легкий доступ к их информации и задачам.</p>
+<p>На основе профилей (типов) пользователей (см. <a href="../../administrator-guide/managing-users-and-groups/creating-user/">Создание пользователя</a>), панель инструментов обеспечивает легкий доступ к их информации и задачам.</p>
 
 
 
@@ -1894,13 +1894,13 @@
         
         
           
-          <a href="creating-metadata/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Создание записи метаданных">
+          <a href="managing-templates/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Управление шаблонами">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Создание записи метаданных
+                Управление шаблонами
               </div>
             </div>
             <div class="md-footer__button md-icon">

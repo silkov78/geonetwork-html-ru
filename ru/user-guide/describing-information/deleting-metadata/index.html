@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://silkov78.github.io/geonetwork-html-ru/ru/user-guide/describing-information/deleting-metadata/">
       
       
-        <link rel="prev" href="../creating-metadata/">
+        <link rel="prev" href="../editing-metadata/">
       
       
-        <link rel="next" href="../editing-metadata/">
+        <link rel="next" href="../multilingual-editing/">
       
       
       <link rel="icon" href="../../../../assets/images/geonetwork-logo.png">
@@ -814,7 +814,7 @@
               
   
   <span class="md-ellipsis">
-    Работа с записями метаданных
+    Описание информации
   </span>
   
 
@@ -830,10 +830,31 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            Работа с записями метаданных
+            Описание информации
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Управление шаблонами
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -848,6 +869,48 @@
   
   <span class="md-ellipsis">
     Создание записи метаданных
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../importing-metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Импорт метаданных
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editing-metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Редактирование метаданных
   </span>
   
 
@@ -895,32 +958,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../editing-metadata/" class="md-nav__link">
+      <a href="../multilingual-editing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Редактирование метаданных
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../importing-metadata/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Импорт метаданных
+    Многоязычное редактирование
   </span>
   
 
@@ -942,48 +984,6 @@
   
   <span class="md-ellipsis">
     Создание записей согласно директиве INSPIRE
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../managing-templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Управление шаблонами
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../multilingual-editing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Многоязычное редактирование
   </span>
   
 
@@ -1413,7 +1413,7 @@
       
   
   <span class="md-ellipsis">
-    Administration
+    Администрирование
   </span>
   
 
@@ -1823,19 +1823,19 @@
 
 
 <h1 id="_1">Удаление записи метаданных</h1>
-<p>Пользователь должен иметь права на редактирование, чтобы иметь возможность удалить запись. В этом разделе описаны различные способы удаления записи..</p>
+<p>Пользователь должен иметь права на редактирование записи, чтобы иметь возможность её удалить.</p>
 <p>Существует несколько способов удалить запись:</p>
 <ul>
-<li>В окне просмотра записей щелкните меню <code>Удалить</code>.</li>
-<li>В результатах поиска выберите одну или несколько записей и выберите <code>Удалить</code> в меню <code>actions on selection</code>.</li>
-<li>В разделе <code>Редактирование</code> нажмите кнопку <code>Удалить</code> для записи.</li>
+<li>Непосредственно, в окне просмотра записи выбрать <code>Удалить</code>.</li>
+<li>В результатах поиска выбрать одну или несколько записей и нажать <code>Удалить</code> в меню <code>Действия по выбору</code>.</li>
+<li>В панели редактора (в главном меню <code>Редактирование</code> - <code>Панель редактора</code>) нажать кнопку <code>Удалить</code> для записи.</li>
 </ul>
-<div class="admonition внимание">
-<p class="admonition-title">Внимание</p>
-<p>Если метаданные получены с помощью сборщика данных (см. <a href="../../harvesting/">Сборщик данных)</a>) из внешнего (удалённого) источника данных, <strong>метаданные автоматически удаляются</strong>:</p>
+<div class="admonition примечание">
+<p class="admonition-title">Примечание</p>
+<p>Для метаданных, полученых с помощью сборщика данных (см. <a href="../../harvesting/">Сборщик данных)</a>) из внешнего источника, будут действовать следующие правила:</p>
 <ol>
-<li><strong><em>Когда удаляются метаданные с внешнего источника данных.</em></strong></li>
-<li>Когда удаляется сам сборщик (харвестер). Запись повторно появляется при следующем запуске сборщика.</li>
+<li>Метаданные автоматически удаляются, <strong>когда удаляются метаданные с внешнего источника данных.</strong></li>
+<li>Метаданные автоматически удаляются, когда удаляется сам сборщик данных. Запись повторно появляется при следующем запуске сборщика.</li>
 </ol>
 </div>
 
@@ -1875,7 +1875,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../creating-metadata/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Создание записи метаданных">
+          <a href="../editing-metadata/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Редактирование метаданных">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1885,20 +1885,20 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Создание записи метаданных
+                Редактирование метаданных
               </div>
             </div>
           </a>
         
         
           
-          <a href="../editing-metadata/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Редактирование метаданных">
+          <a href="../multilingual-editing/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Многоязычное редактирование">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Редактирование метаданных
+                Многоязычное редактирование
               </div>
             </div>
             <div class="md-footer__button md-icon">

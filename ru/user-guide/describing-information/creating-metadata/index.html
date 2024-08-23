@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://silkov78.github.io/geonetwork-html-ru/ru/user-guide/describing-information/creating-metadata/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../managing-templates/">
       
       
-        <link rel="next" href="../deleting-metadata/">
+        <link rel="next" href="../importing-metadata/">
       
       
       <link rel="icon" href="../../../../assets/images/geonetwork-logo.png">
@@ -814,7 +814,7 @@
               
   
   <span class="md-ellipsis">
-    Работа с записями метаданных
+    Описание информации
   </span>
   
 
@@ -830,10 +830,31 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            Работа с записями метаданных
+            Описание информации
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../managing-templates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Управление шаблонами
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -913,11 +934,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../deleting-metadata/" class="md-nav__link">
+      <a href="../importing-metadata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Удаление записи метаданных
+    Импорт метаданных
   </span>
   
 
@@ -955,53 +976,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../importing-metadata/" class="md-nav__link">
+      <a href="../deleting-metadata/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Импорт метаданных
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../inspire-editing/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Создание записей согласно директиве INSPIRE
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../managing-templates/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Управление шаблонами
+    Удаление записи метаданных
   </span>
   
 
@@ -1023,6 +1002,27 @@
   
   <span class="md-ellipsis">
     Многоязычное редактирование
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inspire-editing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Создание записей согласно директиве INSPIRE
   </span>
   
 
@@ -1452,7 +1452,7 @@
       
   
   <span class="md-ellipsis">
-    Administration
+    Администрирование
   </span>
   
 
@@ -1879,35 +1879,36 @@
 
 
 <h1 id="creating-metadata">Создание записи метаданных</h1>
-<p>Это руководство описывает процесс добавления в каталог новых записей метаданных и связанных с ними данных или сервисами.</p>
+<p>В этом разделе описан процесс добавления в каталог новых записей метаданных и связанных с ними данных или сервисами.</p>
 <h2 id="_1">Прежде чем начать</h2>
 <p>Чтобы добавить или отредактировать метаданные, пользователь:</p>
 <ul>
-<li>Должен иметь профиль <code>редактора</code> или выше.</li>
-<li>Должен быть членом группы, для которой вы хотите добавить информацию.</li>
+<li>Должен иметь профиль <code>Редактор</code> или выше.</li>
+<li>Должен быть членом группы, для которой будет добавлена информация.</li>
 </ul>
-<p>Обратитесь к администратору, если у вас нет нужного профиля.</p>
+<p>Нужный профиль может назначить администратор каталога.</p>
 <ol>
 <li>
-<p>На главной странице перейдите в раздел <em>Редактирование</em> и нажмите в меню <code>Добавить новую запись</code>.</p>
+<p>В главном меню выберите <code>Редактирование</code> - <code>Добавить новую запись</code>.</p>
 <p><img alt="" src="../../../../user-guide/describing-information/img/add-new-record.png" /></p>
 </li>
 <li>
-<p>Откроется окно выбора шаблона. Слева выберите тип ресурса, который будет описывать метаданные (Карта, Каталого пространственных объектов, Набор данных, Сервис, Тип объекта).</p>
+<p>Откроется окно выбора шаблона. Слева нужно выбрать тип ресурса, который будет описывать метаданные (Карта, Каталого пространственных объектов, Набор данных, Сервис, Тип объекта).</p>
 </li>
 <li>В появившемся списке шаблонов метаданных для выбранного типа ресурса выберите подходящий шаблон (см. <a href="../managing-templates/">Управление шаблонами</a>).</li>
-<li>Выберите группу из выпадающего списка (форма может отсутствовать) и нажмите <code>Создать</code>
+<li>Последним шагом нужно выбрать группу из выпадающего списка и нажить <code>Создать</code>, чтобы открыть окно создания записи метаданных.
     <img alt="" src="../../../../user-guide/describing-information/img/creating-metadata.png" /></li>
 </ol>
 <div class="admonition примечание">
 <p class="admonition-title">Примечание</p>
-<p>Если в каталоге определена только одна группа, она будет выбрана группа по умолчанию.</p>
+<p>Если в каталоге определена только одна группа, она будет выбрана по умолчанию.</p>
 </div>
-<p>Следующие шаги:</p>
+<p>В открывшемся окне нужно:</p>
 <ul>
-<li>Заполните поля, предусмотренные по умолчанию в шаблоне.</li>
-<li>Создайте изображение ваших данных, чтобы проиллюстрировать их в результатах поиска.</li>
-<li>Нажмите <code>Сохранить</code> в правом верхнем углу.</li>
+<li>Заполнить поля, предусмотренные по умолчанию в шаблоне.</li>
+<li>Создать логотип (изображение-аватар) созданной записи метаданных, чтобы проиллюстрировать их в результатах поиска.</li>
+<li>Нажать <code>Сохранить</code> в правом верхнем углу.</li>
+<li></li>
 </ul>
 
 
@@ -1946,7 +1947,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Назад: Работа с записями метаданных">
+          <a href="../managing-templates/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Управление шаблонами">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1956,20 +1957,20 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Работа с записями метаданных
+                Управление шаблонами
               </div>
             </div>
           </a>
         
         
           
-          <a href="../deleting-metadata/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Удаление записи метаданных">
+          <a href="../importing-metadata/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Импорт метаданных">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Удаление записи метаданных
+                Импорт метаданных
               </div>
             </div>
             <div class="md-footer__button md-icon">
