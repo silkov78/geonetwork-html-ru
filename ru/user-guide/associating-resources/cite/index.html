@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/user-guide/associating-resources/cite/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -930,7 +924,7 @@
       
   
   <span class="md-ellipsis">
-    Связывание с файлами
+    Связывание с документами
   </span>
   
 
@@ -989,7 +983,7 @@
       
   
   <span class="md-ellipsis">
-    Связывание с другой записью
+    Связывание с другими записями
   </span>
   
 
@@ -1923,7 +1917,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/associating-resources/cite.ru.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/user-guide/associating-resources/cite.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1932,7 +1926,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/associating-resources/cite.ru.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/user-guide/associating-resources/cite.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -1940,20 +1934,26 @@
 
 
 <h1 id="cite">Описание ссылки на другой ресурс</h1>
-<p>Каталог может обеспечить автоматическое описание ссылки на другой ресурс на основе информации, предоставленной в записи метаданных.</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/citation.png" /></p>
+<p>Каталог может создавать описание ссылки на другой ресурс на основе информации, предоставленной в записи метаданных.</p>
+<p><img alt="" src="../img/citation.png" /></p>
 <p>Описание ссылки можно использовать для описания данных в публикациях.</p>
 <h2 id="_1">Текст описания ссылки</h2>
-<p>По умолчанию Описание ссылки генерируется в соответствии с общими правилами описания наборов данных, но может быть настроена.</p>
-<p>По умолчанию это: * список авторов (и организации) * год публикации * название * список издательства * URL DOI или URL целевой страницы.</p>
+<p>По умолчанию Описание ссылки генерируется в соответствии с общими правилами описания наборов данных, но оно может быть настроено:</p>
+<ul>
+<li>список авторов (и организации)</li>
+<li>год публикации</li>
+<li>название </li>
+<li>список издательства </li>
+<li>URL DOI или URL целевой страницы.</li>
+</ul>
 <p>Это данные, необходимые для создания DOI (Digital Object Identifier - Идентификатор цифрового объекта) (см. <a href="../doi/">Идентификатор цифрового объекта (DOI)</a>).</p>
-<p>Настроить описании ссылки можно в <code>schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/formatter/citation/common.xsl</code>.</p>
-<p>Дополнительный текст может храниться в описании онлайн-ресурса с протоколом <code>WWW:LINK-1.0-http--publication-URL</code>.</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/citation-with-addition.png" /></p>
+<p>Настроить описание ссылки можно в <code>schemas/iso19115-3.2018/src/main/plugin/iso19115-3.2018/formatter/citation/common.xsl</code>.</p>
+<p>Дополнительное описание может храниться в описании онлайн-ресурса с протоколом <code>WWW:LINK-1.0-http--publication-URL</code>.</p>
+<p><img alt="" src="../img/citation-with-addition.png" /></p>
 <p>Пример: <a href="https://doi.org/10.12770/ad07a55f-5de7-4abc-ba89-8899b16c4b59">https://doi.org/10.12770/ad07a55f-5de7-4abc-ba89-8899b16c4b59</a></p>
 <h2 id="_2">Конфигурация</h2>
-<p>Описание ссылки может отображаться или не отображаться в представлении записи. Проверьте конфигурацию пользовательского интерфейса, чтобы настроить его:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/citation-ui-config.png" /></p>
+<p>Описание ссылки может отображаться или не отображаться в представлении записи. Это может быть настроено в конфигурации пользовательского интерфейса:</p>
+<p><img alt="" src="../img/citation-ui-config.png" /></p>
 <h2 id="_3">Формат</h2>
 <p>Описание ссылки могут быть представлены в различных форматах:</p>
 <ul>
@@ -1963,7 +1963,8 @@
 <li>BibTex</li>
 </ul>
 <h2 id="api">API</h2>
-<p>Описание ссылки можно отобразить в стандартном XSL-форматере, используемом для полного представления, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true">http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true</a></p>
+<p>Описание ссылки можно отобразить в стандартном XSL-форматере, 
+используемом для полного представления, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true">http://localhost:8080/geonetwork/srv/api/records/a46af25c-f949-48a2-9b7e-ac472230cda8?language=all&amp;citation=true</a></p>
 <p>Доступ к форматеру, создающему цитату, можно получить напрямую, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=ris">http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=ris</a></p>
 <p>Для получения списка доступных форматов используйте: <a href="http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=">http://localhost:8080/geonetwork/srv/api/records/31255efc-c5c1-7787-2ae6-b8fc4bcd6e55/formatters/citation?format=</a>?</p>
 

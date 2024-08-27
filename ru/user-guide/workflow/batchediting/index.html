@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/user-guide/workflow/batchediting/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -2102,7 +2096,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/workflow/batchediting.ru.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/user-guide/workflow/batchediting.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2111,7 +2105,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/workflow/batchrawing.ru.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/user-guide/workflow/batchrawing.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2120,7 +2114,7 @@
 
 <h1 id="batchediting">Редактирование набора записей</h1>
 <p>Из панели редактора можно открыть окно пакетного редактирования, где выполняется редактирование набора записей метаданных (<code>Редактирование</code>-<code>Панель редактора</code>-<code>Пакетное редактирование</code>). </p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-editing-menu.png" /></p>
+<p><img alt="" src="../img/batch-editing-menu.png" /></p>
 <p>Пакетное редактирование записей состоит из 3 этапов:</p>
 <ul>
 <li>Выбор набора записей (<code>Выбрать набор записей</code>)</li>
@@ -2136,7 +2130,7 @@
 </ul>
 <p><strong>Предупреждение: неправильное определение правок может испортить сразу несколько записей. При определении нового xpath или использовании режима удаления или замены следует предварительно тестировать изменения на одной записи, прежде чем применять изменения к большому количеству записей. При необходимости сначала можно сделать резервную копию всех записей.</strong></p>
 <p>Изменения определяются на основе каждого стандарта. Набор полей по умолчанию для редактирования доступен и может быть расширен в файле <code>config-editor.xml</code> стандарта.</p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-editing-iso19139fields.png" /></p>
+<p><img alt="" src="../img/batch-editing-iso19139fields.png" /></p>
 <p>Доступен расширенный режим для определения пользовательских правок, редактируя XML-документ напрямую. Расширенный режим состоит из:</p>
 <ul>
 <li>необязательного заголовка</li>
@@ -2144,7 +2138,7 @@
 <li>обязательного XPath, указывающего на элемент(ы) для обновления. XPath может содержать выражение фильтра.</li>
 <li>значение, которое может быть фрагментом XML или текстовой строкой, если режим не <code>Удалить элемент</code>.</li>
 </ul>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-editing-advancedmode.png" /></p>
+<p><img alt="" src="../img/batch-editing-advancedmode.png" /></p>
 <p>Чтобы добавить элемент, например, добавить новый раздел с ключевым словом в первую позицию:</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">[{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;xpath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:descriptiveKeywords[1]&quot;</span><span class="p">,</span>
@@ -2163,11 +2157,11 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;gn_replace&gt;Waste water&lt;/gn_replace&gt;&quot;</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}]</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-editing-replace.png" /></p>
+<p><img alt="" src="../img/batch-editing-replace.png" /></p>
 <h2 id="_2">Применение изменений</h2>
 <p>При применении изменений применяются привилегии пользователя, поэтому если пользователь не может редактировать выбранную запись, пакетное редактирование не будет применено к этой записи.</p>
 <p>Отчет о пакетном редактировании показывает, сколько записей было обработано:</p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-editing-report.png" /></p>
+<p><img alt="" src="../img/batch-editing-report.png" /></p>
 <p>Пакетное редактирование также может быть применено с помощью API: <code>doc/api/index.html#/records/batchEdit&gt;</code>.</p>
 <h2 id="_3">Примеры</h2>
 <h3 id="_4">Добавление новых ключевых слов</h3>

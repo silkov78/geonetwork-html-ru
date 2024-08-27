@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/customizing-application/editor-ui/creating-custom-editor/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -1930,7 +1924,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/customizing-application/editor-ui/creating-custom-editor.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/customizing-application/editor-ui/creating-custom-editor.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1939,7 +1933,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/customizing-application/rawor-ui/creating-custom-rawor.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/customizing-application/rawor-ui/creating-custom-rawor.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2004,7 +1998,7 @@
 <p>Configure here the list of multilingual fields for a standard.</p>
 <p>By default, if the standard has multilingual support like ISO19139, all fields will be displayed as multilingual fields. Define in the exclude section the exceptions (e.g. <code>gmd:identifier</code> in ISO19139).</p>
 <p>Then this section also allows to define how multilingual fields are displayed using the expanded elements. If expanded, then one field per language is displayed with no need to click on the language switcher.</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/multilingual-editing.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/multilingual-editing.ru.png" /></p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;editor&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">   </span><span class="nt">&lt;fields&gt;</span>...<span class="nt">&lt;/fields&gt;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span><span class="nt">&lt;fieldsWithFieldset&gt;</span>...<span class="nt">&lt;/fieldsWithFieldset&gt;</span>
@@ -2020,7 +2014,7 @@
 <h2 id="creating-custom-editor-views">Configuring views</h2>
 <p>At least one view MUST be defined, but more view modes can be defined depending on the needs.</p>
 <p>By default ISO19139 defines 3 views (i.e. default, advanced, xml) and has one disabled view (i.e. INSPIRE). See <code>schemas/iso19139/src/main/plugin/iso19139/layout/config-editor.xml</code> for the configuration.</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/view-mode.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/import-form.ru.png" /></p>
 <p>Another basic example is the Dublin Core view (see <code>schemas/dublin-core/src/main/plugin/dublin-core/layout/config-editor.xml</code>).</p>
 <p>To create a new view, use the following:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;views&gt;</span>
@@ -2068,7 +2062,7 @@
 <li><strong>upAndDownControlHidden</strong> (Optional) Fixed value: <strong>true</strong></li>
 </ul>
 <p>Define if up and down control should be displayed in that view. If not defined, controls are displayed. Hide those controls in a view to make it easier with less controls for the end-user.</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/editor-control-updown.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/import-form.ru.png" /></p>
 <ul>
 <li><strong>displayAttributes</strong> (Optional) Fixed value: <strong>true</strong></li>
 </ul>
@@ -2111,7 +2105,7 @@
 </ul>
 <h2 id="creating-custom-editor-tab">Defining a tab</h2>
 <p>A view contains at least one tab. In that case it will be the default tab to display and no top toolbar will be displayed to switch from one tab to another.</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/editor-tab-switcher.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/editor-tab-switcher.png" /></p>
 <p>Add custom view with one default tab and a field for the title:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;views&gt;</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&lt;view</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;custom-view&quot;</span><span class="nt">&gt;</span>
@@ -2153,9 +2147,9 @@
 </ul>
 <p>When a tab is in flat mode, this tab will not display elements which are not in the current metadata document and it will display complex elements as a group only if defined in the list of elements with fieldset (see <a href="./#creating-custom-editor-fieldsWithFieldset">Grouping element from the standards</a>).</p>
 <p>Example for a contact in ""non-flat" mode:</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/editor-contact-nonflatmode.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/editor-contact-nonflatmode.png" /></p>
 <p>Example for a contact in "flat" mode:</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/editor-contact-flatmode.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/editor-contact-flatmode.png" /></p>
 <p>This mode makes the layout simpler, but does not provide all controls to remove some of the usually boxed elements. End-users can still change to the advanced view mode to access those hidden elements in flat mode.</p>
 <p>It's recommended to preserve at least one view in ""non-flat" mode for Reviewers or Administrators in order to be able:</p>
 <ul>
@@ -2243,9 +2237,9 @@
 </ul>
 <p>When a tab is in flat mode, this tab will not display elements which are not in the current metadata document and it will display complex elements as a group only if defined in the list of elements with fieldset (see <a href="./#creating-custom-editor-fieldsWithFieldset">Grouping element from the standards</a>).</p>
 <p>Example for a contact in ""non-flat" mode:</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/editor-contact-nonflatmode.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/editor-contact-nonflatmode.png" /></p>
 <p>Example for a contact in "flat" mode:</p>
-<p><img alt="" src="../../../../user-guide/describing-information/img/editor-contact-flatmode.png" /></p>
+<p><img alt="" src="../../../user-guide/describing-information/img/editor-contact-flatmode.png" /></p>
 <p>This mode makes the layout simpler, but does not provide all controls to remove some of the usually boxed elements. End-users can still change to the advanced view mode to access those hidden elements in flat mode.</p>
 <p>It's recommended to preserve at least one view in ""non-flat" mode for Reviewers or Administrators in order to be able:</p>
 <ul>

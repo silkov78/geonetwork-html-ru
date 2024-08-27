@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/administrator-guide/configuring-the-catalog/csw-configuration/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -2145,7 +2139,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/administrator-guide/configuring-the-catalog/csw-configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/administrator-guide/configuring-the-catalog/csw-configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2154,7 +2148,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/administrator-guide/configuring-the-catalog/csw-configuration.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/administrator-guide/configuring-the-catalog/csw-configuration.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2163,13 +2157,13 @@
 
 <h1 id="csw-configuration">Configuring CSW</h1>
 <p>To get to the CSW server configuration, you must be logged on as administrator first. Open 'Settings' from the Administration page and select CSW Server configuration.</p>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/csw.png" /></p>
+<p><img alt="" src="../img/csw.png" /></p>
 <p>The CSW service provides a description of itself, the human who administers it, and other information through a <code>es</code> request (eg. <a href="http://localhost:8080/geonetwork/srv/en/csw?request=GetCapabilities&amp;service=CSW&amp;version=2.0.2">http://localhost:8080/geonetwork/srv/en/csw?request=GetCapabilities&amp;service=CSW&amp;version=2.0.2</a>). This form allows you to configure the CSW server and fill out some of the properties returned in response to a GetCapabilities request.</p>
 <p>Configuration options:</p>
 <ul>
 <li>
 <p><em>CSW Enabled</em>: By default CSW endpoint is enabled, but it can be disabled.</p>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/csw-off.png" /></p>
+<p><img alt="" src="../img/csw-off.png" /></p>
 <p>The Open Geospatial Catalogue Service for the Web (OGC-CSW) service, is a self-describing service that allows query, update and insertion of metadata records.</p>
 </li>
 <li>
@@ -2195,7 +2189,7 @@
 </ul>
 <p>The service record MUST be public.</p>
 <p>If an error occurred while building the capabilities document from the service record, a WARNING is reported using a comment and the default capabilities is used:</p>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/csw-error.png" /></p>
+<p><img alt="" src="../img/csw-error.png" /></p>
 <h2 id="csw-configuration_inspire">CSW Configuration for INSPIRE</h2>
 <p>If your catalogue also focus on INSPIRE (see <a href="../inspire-configuration/">Configuring for the INSPIRE Directive</a>), it may be relevant to also populate the following to properly configure your discovery service:</p>
 <ul>

@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/user-guide/analyzing/data/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -1775,7 +1769,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/analyzing/data.ru.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/user-guide/analyzing/data.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1784,7 +1778,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/analyzing/data.ru.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/user-guide/analyzing/data.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -1797,10 +1791,10 @@
 - Улучшить поиска метаданных
 - Улучшить визуализациюи данных на карте
 Каталог анализирует WFS-объекты и <strong>индексирует</strong> их.</p>
-<p><img alt="" src="../../../../user-guide/analyzing/img/mechanism.png" /></p>
+<p><img alt="" src="../img/mechanism.png" /></p>
 <p>Elasticsearch должен быть установлен и настроен (см. <a href="../../../install-guide/installing-index/">Установка поисковой платформы</a>).</p>
 <p>Когда информация о набора данных с WFS-сервера получена, становится доступна фильтрация в средстве просмотра карты для рассматриваемого набора данных. Интерфейс фильтрации предоставляет возможность разбиения набора данных на поднабора, а также возможность экспорта. Средство просмотра карт пытается подключиться к службе WFS, заменяя в URL службы WMS на WFS. Если такой запрос на WFS-сервис успешный, панель фильтрации предоставляет возможность индексировать объекты у рассматриваемого набора данных. Пользователь должен быть авторизован, чтобы запустить процесс индексирования.</p>
-<p><img alt="" src="../../../../user-guide/analyzing/img/layernotindexed.png" /></p>
+<p><img alt="" src="../img/layernotindexed.png" /></p>
 <p>После индексации все пользователи могут получить доступ к меню фильтрации, обеспечивающему:</p>
 <ul>
 <li>текстовый поиск по всем полям набора данных</li>
@@ -1809,11 +1803,11 @@
 <li>отображения всех значений в таблице</li>
 <li>применять фильтры к слоям WMS, используя SLD</li>
 </ul>
-<p><img alt="" src="../../../../user-guide/analyzing/img/filtering.png" /></p>
+<p><img alt="" src="../img/filtering.png" /></p>
 <p>Нажмите на меню таблицы, чтобы отобразить атрибуты. Дважды щелкните строку в таблице, чтобы изменить масштаб атрибута.</p>
-<p><img alt="" src="../../../../user-guide/analyzing/img/tableview.png" /></p>
+<p><img alt="" src="../img/tableview.png" /></p>
 <p>Также можно применять пространственные фильтры.</p>
-<p><img alt="" src="../../../../user-guide/analyzing/img/filteringlayer.png" /></p>
+<p><img alt="" src="../img/filteringlayer.png" /></p>
 <h2 id="_1">Настройка типа объекта</h2>
 <p>По умолчанию панель фильтров формируется на основе индекса Elasticsearch. Но вы можете настроить ее для определенного WFS-объекта из набора данных.</p>
 <p>Настройка осуществляется с помощью конфигурационного JSON-файла, вставленного в раздел gmd:applicationProfile онлайн-ресурса в метаданных.</p>

@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/tutorials/inspire/download-geoserver/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -1550,7 +1544,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/tutorials/inspire/download-geoserver.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/tutorials/inspire/download-geoserver.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1559,7 +1553,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/tutorials/inspire/download-geoserver.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/tutorials/inspire/download-geoserver.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -1573,23 +1567,23 @@
 <p>To support the INSPIRE data models the geoserver <a href="https://docs.geoserver.org/stable/en/user/data/app-schema/">"appschema" plugin</a> needs to be installed. Configuring appschema support in GeoServer is not the goal of this tutorial. Appschema support for INSPIRE is nicely documented by <a href="https://data.gov.uk/sites/default/files/library/INSPIREWFSCookbook_v1.0.pdf">Marcus Sen</a>. Another valuable resource is available at <a href="https://www.geo-solutions.it/blog/inspire-support-in-geoserver-made-easy-with-hale/">geosolutions</a>. In this tutorial we'll focus on metadata aspects of a WFS download service.</p>
 <p>Download and install GeoServer INSPIRE extension as documented in <a href="https://docs.geoserver.org/latest/en/user/extensions/inspire/using.html">installing inspire extension</a></p>
 <p>Create at least one workspace per data model. On workspace properties activate "Settings" and set the selected service type (WFS).</p>
-<p><img alt="image" src="../../../../tutorials/inspire/img/image_0.png" /></p>
+<p><img alt="image" src="../img/image_0.png" /></p>
 <p>On WFS settings, select the new workspace and fill out the form (keep service metadata url empty for now) as described in <a href="https://docs.geoserver.org/latest/en/user/extensions/inspire/using.html">using inspire extension</a>. If the new workspace is not in the pull down, return to previous step and make sure "Settings" is activated for the workspace. If the INSPIRE fields are not visible, make sure the INSPIRE extension is correctly installed.</p>
-<p><img alt="image" src="../../../../tutorials/inspire/img/image_8.png" /></p>
+<p><img alt="image" src="../img/image_8.png" /></p>
 <p>Create featuretypes according to the appschema documentation.</p>
 <h2 id="geonetwork">GeoNetwork</h2>
 <p>When deploying GeoNetwork, make sure the GEMET thesauri are loaded and activate the INSPIRE editor as described in <a href="../../../administrator-guide/configuring-the-catalog/inspire-configuration/">inspire documentation</a>.</p>
 <p>In Admin &rarr; Settings activate the INSPIRE extension.</p>
-<p><img alt="image" src="../../../../tutorials/inspire/img/image_3.png" /></p>
+<p><img alt="image" src="../img/image_3.png" /></p>
 <p>For each dataset that you are going to publish create an iso19115 record using the INSPIRE template. Link each record to a download service as created in geoserver: eg <a href="https://%7Burl%7D/geoserver/%7Bworkspace%7D/ows?request=getcapabilities&amp;service=wfs&amp;version=2.0.0">https://%7Burl%7D/geoserver/%7Bworkspace%7D/ows?request=getcapabilities&amp;service=wfs&amp;version=2.0.0</a></p>
-<p><img alt="image" src="../../../../tutorials/inspire/img/image_9.png" /></p>
+<p><img alt="image" src="../img/image_9.png" /></p>
 <p>Create an OGC harvester that is able to extract a metadata for service (iso19119) record from the WFS. Run the harvester and note down the identifier of the created service metadata.</p>
 <h2 id="return-to-geoserver">Return to GeoServer</h2>
 <p>For each layer add a metadata url to the layer configuration of type application/vnd.ogc.csw.GetRecordByIdResponse_xml.</p>
 <p>On the WFS-settings &rarr; INSPIRE workspace add the link to the service metadata. In contradiction to WMS does WFS not link from a featuretype (layer) to metadata, instead the links to dataset metadata have to be added as part of the extende INSPIRE capabilities.</p>
 <h2 id="validate-the-implementation">Validate the implementation</h2>
 <p>If you are running the above setup online, you can use the <a href="https://inspire-geoportal.ec.europa.eu/validator2/">pilot JRC INSPIRE validator</a>. If the above setup is running locally, you can use <a href="https://github.com/Geonovum/etf-test-projects-inspire">Esdin Test Framework</a> to validate the INSPIRE setup.</p>
-<p><img alt="image" src="../../../../tutorials/inspire/img/image_6.png" /></p>
+<p><img alt="image" src="../img/image_6.png" /></p>
 <p>Running the test frequently during development helps to identify issues in an early stage.</p>
 
 

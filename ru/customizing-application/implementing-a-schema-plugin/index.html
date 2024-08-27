@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../fr/customizing-application/implementing-a-schema-plugin/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -2350,7 +2344,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/customizing-application/implementing-a-schema-plugin.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/customizing-application/implementing-a-schema-plugin.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2359,7 +2353,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/customizing-application/implementing-a-schema-plugin.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/customizing-application/implementing-a-schema-plugin.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2966,7 +2960,7 @@ schema-conversions.xml  schema-ident.xml  schema.xsd  schema
 </span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="nt">&lt;/element&gt;</span>
 </span></code></pre></div>
 <p>This would result in the Editor (through the XSLT metadata.xsl) displaying the credit field with these helper options listed beside it in a drop down/select menu something like the following:</p>
-<p><img alt="" src="../../../customizing-application/img/editor-helper.png" /></p>
+<p><img alt="" src="../img/editor-helper.png" /></p>
 <h4 id="more-on-stringsxml">More on strings.xml</h4>
 <p>A localized copy of <code>strings.xml</code> is made available on an XPath to the presentation XSLTs eg. /root/gui/schemas/iso19139/strings for the iso19139 schema.</p>
 <p>After adding the localized strings, our new GeoNetwork plugin schema for MCP contains:</p>
@@ -3319,11 +3313,11 @@ schema
 <h4 id="creating-the-indexxsl-to-index-content-from-the-metadata-record">Creating the index.xsl to index content from the metadata record</h4>
 <p>This XSLT indexes the content of elements in the metadata record. The essence of this XSLT is to select elements from the metadata record and map them to index field names. Using Kibana user can browse the index and check all fields available. The number of fields depends on the catalog as some fields are dynamic eg. codelist, thesaurus.</p>
 <p>In Kibana, navigate to <code>Stack Management --&gt; Index pattern</code></p>
-<p><img alt="" src="../../../customizing-application/img/kb-index-pattern.png" /></p>
+<p><img alt="" src="../img/kb-index-pattern.png" /></p>
 <p>Select <code>gn-records</code> to retrieve the list of fields:</p>
-<p><img alt="" src="../../../customizing-application/img/kb-index-fields.png" /></p>
+<p><img alt="" src="../img/kb-index-fields.png" /></p>
 <p>If Elasticsearch instance is accessible, user can get the details about a record using <a href="http://localhost:9200/gn-records/_doc/7c7923b1-c387-49ac-b6c7-391ca187b7fa">http://localhost:9200/gn-records/_doc/7c7923b1-c387-49ac-b6c7-391ca187b7fa</a> (<code>Kibana --&gt; dev tools</code> can also be used to get the document details):</p>
-<p><img alt="" src="../../../customizing-application/img/es-get-doc.png" /></p>
+<p><img alt="" src="../img/es-get-doc.png" /></p>
 <p>For example, here is the mapping created between the metadata element mcp:revisionDate and the index field changeDate:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nt">&lt;xsl:for-each</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;mcp:revisionDate/*&quot;</span><span class="nt">&gt;</span>
 </span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a><span class="w">  </span><span class="nt">&lt;changeDate&gt;&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;string(.)&quot;</span><span class="nt">/&gt;&lt;/changeDate&gt;</span>
@@ -3483,7 +3477,7 @@ schema-ident.xml  schema.xsd  schema  schematron/schematron-rules-iso-mcp.sch
 </span><span id="__span-48-26"><a id="__codelineno-48-26" name="__codelineno-48-26" href="#__codelineno-48-26"></a><span class="nt">&lt;xs:element</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;MD_Commons&quot;</span><span class="w"> </span><span class="na">substitutionGroup=</span><span class="s">&quot;gmd:MD_Constraints&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;mcp:MD_CommonsConstraints_Type&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
 <p>For MCP records, the GeoNetwork editor will show a choice of elements from the substitution group for gmd:MD_Constraints when adding 'Resource Constraints' to the metadata document. This will now include mcp:MD_Commons.</p>
-<p><img alt="" src="../../../customizing-application/img/Editor-Constraints-Choices.png" /></p>
+<p><img alt="" src="../img/Editor-Constraints-Choices.png" /></p>
 <p>Note that by similar process, two other elements, now deprecated in favour of MD_Commons, were also added as substitutes for MD_Constraints. If it was necessary to constrain the choices shown in this menu, say to remove the deprecated elements and limit the choices to just legal, security and commons, then this can be done by the following piece of XML in the schema-substitutes.xml file:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nt">&lt;field</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;gmd:MD_Constraints&quot;</span><span class="nt">&gt;</span>
 </span><span id="__span-49-2"><a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">  </span><span class="nt">&lt;substitute</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;gmd:MD_LegalConstraints&quot;</span><span class="nt">/&gt;</span>
@@ -3492,7 +3486,7 @@ schema-ident.xml  schema.xsd  schema  schematron/schematron-rules-iso-mcp.sch
 </span><span id="__span-49-5"><a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a><span class="nt">&lt;/field&gt;</span>
 </span></code></pre></div>
 <p>The result of this change is shown below.</p>
-<p><img alt="" src="../../../customizing-application/img/Editor-Constraints-Choices-Modified.png" /></p>
+<p><img alt="" src="../img/Editor-Constraints-Choices-Modified.png" /></p>
 <p>Once again, a good place to start when building a schema-substitutes.xml file for the MCP is the schema-substitutes.xml file for the iso19139 schema.</p>
 <h4 id="adding-components-to-support-conversion-of-metadata-records-to-other-schemas">Adding components to support conversion of metadata records to other schemas</h4>
 <h4 id="creating-the-convert-directory">Creating the convert directory</h4>

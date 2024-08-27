@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/administrator-guide/managing-classification-systems/managing-directories/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -2097,7 +2091,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/administrator-guide/managing-classification-systems/managing-directories.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/administrator-guide/managing-classification-systems/managing-directories.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2106,7 +2100,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/administrator-guide/managing-classification-systems/managing-directories.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/administrator-guide/managing-classification-systems/managing-directories.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2147,19 +2141,19 @@
 </ul>
 <h2 id="managing-directories-of-subtemplates">Managing Directories of subtemplates</h2>
 <p>There are some differences between the handling of subtemplates and metadata records. Unlike metadata records, subtemplates do not have a consistent root element, the metadata schema they use may not be recognizable, they do not appear in the main search results (unless they are part of a metadata record). Therefore, the editor board allows you to search and manage privileges for directory entries.</p>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-search.png" /></p>
+<p><img alt="" src="../img/directories-search.png" /></p>
 <p>From the editor board, choose <code>Manage directory</code> to access the editor for directory entries:</p>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-manager.png" /></p>
+<p><img alt="" src="../img/directories-manager.png" /></p>
 <p>If you do not see the <code>Organizations and Contacts</code> tab then ensure that you have created subtemplates for contacts for your metadata profile, and that you have loaded them using the <code>Metadata and Templates</code> section.</p>
 <p>From this page, editors can choose a type of directory using the top tabs, edit/remove/import new subtemplates.</p>
 <p>To import new entries, use the metadata import page and choose the appropriate type of record:</p>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-import.png" /></p>
+<p><img alt="" src="../img/directories-import.png" /></p>
 <p>Like metadata records, they are allocated an integer id and are stored in the catalog metadata table (with template field set to "y").</p>
 <h2 id="insert-a-directory-entry-in-a-metadata-record">Insert a directory entry in a metadata record</h2>
 <p>From the metadata editor, the directory can be used to populate contacts for example.</p>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-editor-popup.png" /></p>
+<p><img alt="" src="../img/directories-editor-popup.png" /></p>
 <p>Open the directory selector, choose a contact and then choose the contact role.</p>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-editor-popupopen.png" /></p>
+<p><img alt="" src="../img/directories-editor-popupopen.png" /></p>
 <h2 id="extracting-subtemplates-from-metadata-records">Extracting subtemplates from metadata records</h2>
 <p>Many sites have existing metadata records with common information eg. contact information in an ISO CI_Contact element. Directory entries such as these can be extracted from a selected set of metadata records using the "Extract subtemplates" API.</p>
 <p>To use this function the following set of steps should be followed:</p>
@@ -2223,7 +2217,7 @@
 <li>Identify and record the XPath of a field or fields within the fragment which text content will be used as the id of the subtemplate. This XPath should be relative to the root element of the fragment identified in the previous step. So for example, in the fragment above we could choose <code>.//gmd:electronicMailAddress/gco:CharacterString/text()</code> as the id for the fragments to be created.</li>
 <li>On the API page, choose the registries / collect operation:</li>
 </ul>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-api-collect.png" /></p>
+<p><img alt="" src="../img/directories-api-collect.png" /></p>
 <ul>
 <li>Fill in the form with the information collected in the previous steps.</li>
 <li>Extracted subtemplates can be previewed using the GET mode and once validated, use the PUT method to save results in the catalog.</li>
@@ -2271,7 +2265,7 @@
 <li><code>propertiesToCopy</code> to preserve some element which may be defined in the fragment in the metadata (eg. contact role)</li>
 <li><code>substituteAsXLink</code> to indicate if copy/paste mode or XLink mode should be used.</li>
 </ul>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-api-synch.png" /></p>
+<p><img alt="" src="../img/directories-api-synch.png" /></p>
 <h2 id="managing-the-fragment-cache">Managing the fragment cache</h2>
 <p>If metadata records in your catalog link in fragments from external sites, the catalog caches these fragments after the first look up so as to reduce the amount of network traffic and speed up the display of metadata records in search results.</p>
 <p>The cache is handled automatically using the Java Cache System (JCS). JCS handles large caches intelligently by:</p>
@@ -2282,7 +2276,7 @@
 </ul>
 <p>You can configure JCS parameters in GeoNetwork using the JCS configuration file in <strong>INSTALL_DIR/web/geonetwork/WEB-INF/classes/cache.ccf</strong>.</p>
 <p>Some operations in the catalog (such as harvesting) that generate metadata fragments, will automatically refresh the XLink cache when a new fragment is generated. However, if you are linking fragments from an external site, then depending on how often the change, you will need to manually refresh the XLink cache. To do this you should navigate to the Administration page and select the "Clear XLink Cache and Rebuild Index of Records with XLinks" function as highlighted in the following screenshot of the "Administration" page.</p>
-<p><img alt="" src="../../../../administrator-guide/managing-classification-systems/img/directories-cache.png" /></p>
+<p><img alt="" src="../img/directories-cache.png" /></p>
 
 
 

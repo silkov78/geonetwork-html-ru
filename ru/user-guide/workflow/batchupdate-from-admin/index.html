@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/user-guide/workflow/batchupdate-from-admin/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -1964,7 +1958,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/workflow/batchupdate-from-admin.ru.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/user-guide/workflow/batchupdate-from-admin.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1973,7 +1967,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/workflow/batchupdate-from-admin.ru.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/user-guide/workflow/batchupdate-from-admin.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -1986,11 +1980,11 @@
 <ul>
 <li>
 <p>Выбрать набор записей</p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-search-and-select.png" /></p>
+<p><img alt="" src="../img/batch-search-and-select.png" /></p>
 </li>
 <li>
 <p>Выбрать процесс из списка</p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-choose-a-process.png" /></p>
+<p><img alt="" src="../img/batch-choose-a-process.png" /></p>
 </li>
 </ul>
 <p>!!! См. также</p>
@@ -2008,14 +2002,14 @@
 <li>Количество записей, для которых процесс не был найден (процесс зависит от стандарта и может не существовать в зависимости от стандарта).</li>
 <li>Количество записей, которые текущий пользователь не может редактировать</li>
 </ul>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-report.png" /></p>
+<p><img alt="" src="../img/batch-report.png" /></p>
 <p>Перед запуском процесса рекомендуется сделать резервную копию всех записей метаданных, подлежащих обновлению, на случай, если что-то пойдет не так в процессе.</p>
 <p>!!! info «Todo»</p>
 <div class="language-text highlight"><pre><span></span><code>Документирование других процессов
 </code></pre></div>
 <h2 id="_1">Поиск и замена</h2>
 <p>Этот процесс осуществляет поиск значений в элементах и замену их другими значениями. Он поддерживает записи ISO19139 и Dublin Core. Конфигурация выглядит следующим образом:</p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-search-and-replace-configuration.png" /></p>
+<p><img alt="" src="../img/batch-search-and-replace-configuration.png" /></p>
 <ul>
 <li>Выберите пакет (ISO19139 или Dublin Core)</li>
 <li>Выберите элемент из этого пакета для замены (предварительно настроенным является элемент о контакте, но его можно расширить - см. ниже)</li>
@@ -2035,7 +2029,7 @@
 <p>В конфигурации <code>Элемент</code> определяет целевой элемент в записи метаданных. Он начинается с идентификатора схемы, а затем определяет путь к элементу. Это регулярное выражение, которое может использовать <code>.*</code> для поиска всех элементов в документе. Чтобы найти более конкретный элемент, пользователь может определить полный путь, например <code>iso19139\\\.contact\\\.individualName</code>, чтобы найти только индивидуальное имя контакта в метаданных.</p>
 <p>Значение <code>searchval</code> также представляет собой <a href="https://www.regular-expressions.info/tutorial.html">регулярное выражение</a>. Это может быть простой текст или более сложное выражение. Например, при отлове групп поиск по <code>(.*)</code> и замена на <code>Mr $1</code> заменит <code>John</code> на <code>Mr John</code>.</p>
 <p>Последний параметр - это режим "вакуума", определяющий, что делать с пустыми элементами:</p>
-<p><img alt="" src="../../../../user-guide/workflow/img/batch-search-and-replace-vacuum.png" /></p>
+<p><img alt="" src="../img/batch-search-and-replace-vacuum.png" /></p>
 <p>После завершения настройки пользователь может просмотреть изменения, нажав кнопку <code>Test</code>, а затем применить их с помощью <code>Run</code>.</p>
 
 

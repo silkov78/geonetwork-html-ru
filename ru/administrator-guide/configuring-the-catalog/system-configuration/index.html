@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/administrator-guide/configuring-the-catalog/system-configuration/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -2541,7 +2535,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/administrator-guide/configuring-the-catalog/system-configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/administrator-guide/configuring-the-catalog/system-configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2550,7 +2544,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/administrator-guide/configuring-the-catalog/system-configuration.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/administrator-guide/configuring-the-catalog/system-configuration.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2563,7 +2557,7 @@
 <p class="admonition-title">Important</p>
 <p>Configuration of these parameters is critically important for the catalog in an operational context. Misunderstanding some settings may result in a system that does not function as expected. For example, downloads may fail to be correctly processed, or metadata harvesting from other servers may not work.</p>
 </div>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/settings.png" /></p>
+<p><img alt="" src="../img/settings.png" /></p>
 <p>Since the settings form is a long form, the <code>save</code> button is repeated between the sections and will save all settings.</p>
 <h2 id="catalog-description">Catalog description</h2>
 <ul>
@@ -2588,7 +2582,7 @@
 <li><strong>Preferred Protocol</strong> Defined the protocol to access the catalog. The HTTP protocol used to access the server. Choosing http means that all communication with the catalog will be visible to anyone listening to the protocol. Since this includes usernames and passwords this is not secure. Choosing https means that all communication with the catalog will be encrypted and thus much harder for a listener to decode.</li>
 <li><strong>Log level</strong> Define the logging level of the application. After modification, log can be checked in the <code>Statistics &amp; status</code> section under <code>Activity</code>.</li>
 </ul>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/log-view.png" /></p>
+<p><img alt="" src="../img/log-view.png" /></p>
 <h2 id="intranet-parameters">Intranet parameters</h2>
 <p>A common need for an organisation is to automatically discriminate between anonymous internal users that access the node from within an organisation (Intranet) and anonymous external users from the Internet. The catalog defines anonymous users from inside the organisation as belonging to the group <em>Intranet</em>, while anonymous users from outside the organisation are defined by the group <em>All</em>. To automatically distinguish users that belong to the Intranet group you need to tell the catalog the intranet IP address and netmask.</p>
 <ul>
@@ -2656,7 +2650,7 @@
 <p class="admonition-title">See Also</p>
 <p>To improve performance the catalog will cache content that is not in the local catalog. Clear the cache of XLink from the <code>Admin console</code> &rarr; <code>Tools</code> if the fragments were updated.</p>
 </div>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/xlink-cache-clear.png" /></p>
+<p><img alt="" src="../img/xlink-cache-clear.png" /></p>
 <h2 id="metadata-update">Metadata update</h2>
 <p>For each metadata schema, the catalog has an XSL transformation (<code>update-fixed-info.xsl</code>) that it can apply to a metadata record belonging to that schema. The aim of this transformation is to allow fixed schema, site and catalog information to be applied to a metadata record every time the metadata record is saved in the editor. As an example, this transformation is used to build and store the URL of any files uploaded and stored with the metadata record in the editor.</p>
 <ul>
@@ -2732,20 +2726,20 @@ type=&quot;application/opensearchdescription+xml&quot; title=&quot;Open Search 
 <li><strong>Restrict import to schemas</strong> List of all allowed schemas for metadata to be imported. If the metadata schema is not allowed, then the import is not done. Use an empty value to allow all schemas.</li>
 <li><strong>Minimum user profile allowed to import metadata</strong> Minimum user profile allowed to import metadata (<code>Editor</code>, <code>Reviewer</code> or <code>Administrator</code>). The default value is <code>Editor</code>.</li>
 </ul>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/metadata-import.png" /></p>
+<p><img alt="" src="../img/metadata-import.png" /></p>
 <h2 id="metadata-delete">Metadata delete</h2>
 <p>Allows to configure the user profile allowed to delete published metadata.</p>
 <ul>
 <li><strong>Minimum user profile allowed to delete published metadata</strong> Minimum user profile allowed to delete metadata (<code>Editor</code>, <code>Reviewer</code> or <code>Administrator</code>). The default value is <code>Editor</code>.</li>
 </ul>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/metadata-delete.png" /></p>
+<p><img alt="" src="../img/metadata-delete.png" /></p>
 <h2 id="metadata-publication">Metadata publication</h2>
 <p>Allows to configure the user profile allowed to publish and un-publish metadata.</p>
 <ul>
 <li><strong>Minimum user profile allowed to publish metadata</strong> Minimum user profile allowed to publish metadata (<code>Reviewer</code> or <code>Administrator</code>). The default value is <code>Reviewer</code>.</li>
 <li><strong>Minimum user profile allowed to un-publish metadata</strong> Minimum user profile allowed to un-publish metadata (<code>Reviewer</code> or <code>Administrator</code>). The default value is <code>Reviewer</code>.</li>
 </ul>
-<p><img alt="" src="../../../../administrator-guide/configuring-the-catalog/img/metadata-publication.png" /></p>
+<p><img alt="" src="../img/metadata-publication.png" /></p>
 <h2 id="harvesting">Harvesting</h2>
 <p><em>Allow editing on harvested records</em>: Enables/Disables editing of harvested records in the catalogue. By default, harvested records cannot be edited.</p>
 

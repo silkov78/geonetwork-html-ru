@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/administrator-guide/configuring-the-catalog/inspire-configuration/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -2211,7 +2205,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/administrator-guide/configuring-the-catalog/inspire-configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/administrator-guide/configuring-the-catalog/inspire-configuration.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2220,7 +2214,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/administrator-guide/configuring-the-catalog/inspire-configuration.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/administrator-guide/configuring-the-catalog/inspire-configuration.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -2234,7 +2228,7 @@
 <ul>
 <li>
 <p>Enable indexing of INSPIRE themes and annexes (INSPIRE themes thesaurus MUST be added to the list of thesaurus from the INSPIRE Registry - see <a href="../../managing-classification-systems/managing-thesaurus/">Managing thesaurus</a>).</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-configuration.png" /></p>
+<p><img alt="image" src="../img/inspire-configuration.png" /></p>
 </li>
 </ul>
 <p>To configure the discovery service, a dedicated service metadata record MUST be created in order to provide a complete GetCapabilities document (<a href="../csw-configuration/#csw-configuration_inspire">CSW Configuration for INSPIRE</a>).</p>
@@ -2254,27 +2248,27 @@
 <li>Metadata codelist register &rarr; <a href="https://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteria">Quality of Service Criteria</a></li>
 </ul>
 <p>From <code>Admin console</code> &rarr; <code>Classification systems</code> &rarr; <code>Thesaurus</code>, administrators can manage thesauri. One of the options is to load a thesaurus straight from the registry.</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-from-registry.png" /></p>
+<p><img alt="image" src="../img/inspire-from-registry.png" /></p>
 <p>Click <code>Use INSPIRE registry</code> to use the default INSPIRE registry but any instance of the <a href="https://joinup.ec.europa.eu/solution/re3gistry">Registry software</a> can be used.</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-from-registry-config.png" /></p>
+<p><img alt="image" src="../img/inspire-from-registry-config.png" /></p>
 <p>Select one or more languages depending on your needs. Choose a category or directly a thesaurus, depending on the thesaurus. By default the type of thesaurus will be <code>Theme</code> but you can adapt it if needed.</p>
 <p>By clicking the <code>Upload</code> button the catalogue will contact the registry, download the files for each languages and combined them in a thesaurus in SKOS format supported by the catalogue.</p>
 <p>User can also use the well known <a href="https://www.eionet.europa.eu/gemet/en/themes/">GEMET thesaurus</a>. Some SKOS format version of the thesaurus are available <a href="https://github.com/geonetwork/util-gemet/tree/master/thesauri">here</a>.</p>
 <p>Once loaded, a thesaurus can be used in metadata records to select keywords from:</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-keyword-editing.png" /></p>
+<p><img alt="image" src="../img/inspire-keyword-editing.png" /></p>
 <p>The type of encoding of keywords can be defined using the gear icon (See validation section for more information):</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-keyword-encoding-type.png" /></p>
+<p><img alt="image" src="../img/inspire-keyword-encoding-type.png" /></p>
 <p>Via the schema plugin form configuration it is an option to configure a thesaurus to be used for a specific <code>or</code> element. The thesaures concepts are used to populate an auto complete text field for that element.</p>
 <h2 id="inspire-validation">INSPIRE validation</h2>
 <p>INSPIRE validation of metadata records is available at <a href="https://inspire.ec.europa.eu/validator/about/">the INSPIRE Validator</a>. It is using <a href="https://github.com/etf-validator/etf-webapp">ETF which is an open source testing framework for spatial data and services</a>. GeoNetwork is able to <code>te</code> any record using a service provided by an instance of ETF. To configure remote validation, go to <code>Admin console</code> &rarr; <code>Settings</code> and set the URL of the validator. The url of the main INSPIRE validator is <code>https://inspire.ec.europa.eu/validator/</code>.</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-configuration.png" /></p>
+<p><img alt="image" src="../img/inspire-configuration.png" /></p>
 <p>Once enabled, the editor will show the remote validation option in the menu:</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-validation-menu.png" /></p>
+<p><img alt="image" src="../img/inspire-validation-menu.png" /></p>
 <p>The standard validate option will use the internal validation system (ie. XSD, Schematron rules for ISO, INSPIRE, ... depending on the configuration). In the internal system the INSPIRE validation is based on INSPIRE Technical guidance version 1.3 and results will be different from ETF reports.</p>
 <p>The remote INSPIRE validation will open the validator in a popup. Choose one of the options depending on the level of validation and type of resource to validate. The list of options can be customized in <a href="https://github.com/geonetwork/core-geonetwork/blob/master/services/src/main/resources/config-spring-geonetwork.xml#L61-L94">this configuration file</a>. The configuration is made by selecting one or more test suite from the ETF options:</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-etf-test-configuration.png" /></p>
+<p><img alt="image" src="../img/inspire-etf-test-configuration.png" /></p>
 <p>During the validation, the record is sent to the ETF service and processed. Once ETF completes the validation, the catalogue will display a link to the validation report.</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-validation-report.png" /></p>
+<p><img alt="image" src="../img/inspire-validation-report.png" /></p>
 <p>Note, that if you are validating a private record, that record will be pushed to the validator. To secure this process we recommend to set up a local (private) installation of the validator.</p>
 <h3 id="configure-validation-test-suites">Configure validation test suites</h3>
 <p>The set of test that runs for each schema can be configured using the file <a href="https://github.com/geonetwork/core-geonetwork/blob/5156bae32d549e6d09cd6a86065791265eb09027/web/src/main/webapp/WEB-INF/config-etf-validator.xml">WEB-INF/config-etf-validator.xml</a>.</p>
@@ -2342,7 +2336,7 @@
 <li>Filter based on the conformance quality report having a reference to the EU directive.</li>
 </ul>
 <p>From the <code>Admin console</code> &rarr; <code>Settings</code> &rarr; <code>Sources</code>, an administrator can create a sub portal. Create a portal <code>inspire</code> and set the filter to select only records related to INSPIRE (eg. <code>+_groupPublished:INSPIRE</code> to select all records published in group INSPIRE).</p>
-<p><img alt="image" src="../../../../administrator-guide/configuring-the-catalog/img/inspire-portal.png" /></p>
+<p><img alt="image" src="../img/inspire-portal.png" /></p>
 <p>Once saved, the portal is accessible at <a href="http://localhost:8080/geonetwork/inspire">http://localhost:8080/geonetwork/inspire</a> and the CSW service at <a href="http://localhost:8080/geonetwork/inspire/eng/csw">http://localhost:8080/geonetwork/inspire/eng/csw</a>.</p>
 <h2 id="inspire-reference-documents">INSPIRE reference documents</h2>
 <ul>

@@ -168,12 +168,6 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../../../fr/user-guide/associating-resources/doi/" hreflang="fr" class="md-select__link">
-              Français
-            </a>
-          </li>
-        
-          <li class="md-select__item">
             <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
@@ -930,7 +924,7 @@
       
   
   <span class="md-ellipsis">
-    Связывание с файлами
+    Связывание с документами
   </span>
   
 
@@ -989,7 +983,7 @@
       
   
   <span class="md-ellipsis">
-    Связывание с другой записью
+    Связывание с другими записями
   </span>
   
 
@@ -1887,7 +1881,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/user-guide/associating-resources/doi.ru.md" title="Редактировать страницу" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/user-guide/associating-resources/doi.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -1896,7 +1890,7 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/user-guide/associating-resources/doi.ru.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/user-guide/associating-resources/doi.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
@@ -1904,31 +1898,33 @@
 
 
 <h1 id="doi">Идентификатор цифрового объекта (DOI)</h1>
-<p>Идентификатор цифрового объекта (DOI) - это буквенно-цифровая строка, присваиваемая для уникальной идентификации объекта. Он привязан к описанию метаданных объекта, а также к цифровому местоположению, например URL, где доступны все сведения об объекте. Более подробную информацию можно найти на сайте <a href="https://datacite.org/create-dois/">DataCite</a>.</p>
 <h2 id="_1">Настройка</h2>
-<p>Каталог поддерживает создание DOI (Digital Object Identifier) с помощью:</p>
+<p>Идентификатор цифрового объекта (DOI) - это буквенно-цифровая строка, присваиваемая для уникальной идентификации объекта.
+Каталог поддерживает создание DOI (Digital Object Identifier) с помощью:</p>
 <ul>
 <li><a href="https://support.datacite.org/docs/mds-api-guide">DataCite API</a>.</li>
 <li>API издательского офиса ЕС <a href="https://ra.publications.europa.eu/servlet/ws/doidata?api=medra.org">https://ra.publications.europa.eu/servlet/ws/doidata?api=medra.org</a>.</li>
 </ul>
-<p>Настройте точку доступа к API в <code>Панели администратор</code> - <code>Настройки</code> и найдите раздел <code>Публикация</code>:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-admin-console.png" /></p>
-<p>Запись в формате DataCite можно загрузить из API, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/da165110-88fd-11da-a88f-000d939bc5d8/formatters/datacite?output=xml">http://localhost:8080/geonetwork/srv/api/records/da165110-88fd-11da-a88f-000d939bc5d8/formatters/datacite?output=xml</a></p>
+<p>Точку доступа к API можно настроить в <code>Панели администратора</code> - <code>Настройки</code> - <code>Публикация</code>:</p>
+<p><img alt="" src="../img/doi-admin-console.png" /></p>
+<p>Запись в формате DataCite можно загрузить через API, используя: <a href="http://localhost:8080/geonetwork/srv/api/records/da165110-88fd-11da-a88f-000d939bc5d8/formatters/datacite?output=xml">http://localhost:8080/geonetwork/srv/api/records/da165110-88fd-11da-a88f-000d939bc5d8/formatters/datacite?output=xml</a></p>
 <h2 id="doi_1">Создание DOI</h2>
 <p>После настройки, DOI может быть создан с помощью интерфейса. DOI создается по запросу. Это означает, что пользователь должен запросить создание DOI. Он может быть создан:
 - Пользователем, создавшим метаданные.
 - Пользователем с профилем Reviewer (рецензент) в группе владельцев метаданных.
 - Администратором</p>
-<p>При создании задачи рецензент группы получает уведомление по электронной почте (по умолчанию, может быть настроен только для администратора с помощью уровня уведомления задачи).</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-request-menu.png" /></p>
+<p>При создании задачи (запроса на создание DOI) рецензент группы получает уведомление по электронной почте 
+(по умолчанию, может быть настроен только для администратора с помощью уровня уведомления задачи).</p>
+<p><img alt="" src="../img/doi-request-menu.ru.png" /></p>
 <p>Задача назначается конкретному пользователю. Дополнительно можно указать дату выполнения и комментарий:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-request-popup.png" /></p>
-<p>После отправки задания владелец задачи получает уведомление по электронной почте (если настроен почтовый сервер, см. консоль администратора &rarr; настройки). Затем задание можно разрешить в консоли администратора &rarr; информация &rarr; раздел версионирования.</p>
+<p><img alt="" src="../img/doi-request-popup.ru.png" /></p>
+<p>После отправки задания владелец задачи получает уведомление по электронной почте (если настроен почтовый сервер). 
+Затем задание можно разрешить в консоли администратора &rarr; информация &rarr; версионирование.</p>
 <p>Если конфигурация отсутствует или неверна, сообщается об ошибке:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-config-wrong.png" /></p>
+<p><img alt="" src="../img/doi-config-wrong.png" /></p>
 <p>Для создания DOI задача состоит из двух шагов:</p>
 <ul>
-<li>Сначала проверьте, все ли предварительные условия соблюдены (<a href="https://datacite.org/create-dois/">DataCite</a>).</li>
+<li>Проверка, все ли предварительные условия соблюдены (<a href="https://datacite.org/create-dois/">DataCite</a>).</li>
 </ul>
 <p>Формат DataCite требует наличия некоторых обязательных полей:</p>
 <ul>
@@ -1988,19 +1984,19 @@
 </ul>
 <p>Более подробную информацию о формате см. по адресу <a href="http://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf">http://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf</a>.</p>
 <p>DataCite API возвращает ошибку проверки XSD.</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-request-check.png" /></p>
+<p><img alt="" src="../img/doi-request-check.png" /></p>
 <p>Каталог также позволяет применять валидацию DataCite в редакторе:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-validation.png" /></p>
+<p><img alt="" src="../img/doi-validation.png" /></p>
 <p>DOI может быть уже присвоен записи:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-exists.png" /></p>
+<p><img alt="" src="../img/doi-exists.png" /></p>
 <p>В этом случае DOI может быть обновлен. Если DOI уже присвоен записи метаданных, редакторы также могут обновить DOI из редактора:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-update-in-editor.png" /></p>
+<p><img alt="" src="../img/doi-update-in-editor.png" /></p>
 <p>После проверки создайте DOI</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-request-check-ok.png" /></p>
+<p><img alt="" src="../img/doi-request-check-ok.png" /></p>
 <p>После создания будет доступна ссылка на DOI и на документ DataCite:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-created.png" /></p>
+<p><img alt="" src="../img/doi-created.png" /></p>
 <p>Затем DOI добавляется в запись метаданных:</p>
-<p><img alt="" src="../../../../user-guide/associating-resources/img/doi-in-xml.png" /></p>
+<p><img alt="" src="../img/doi-in-xml.png" /></p>
 
 
 
@@ -2038,7 +2034,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../linking-remote-records/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Ссылка на удаленную запись">
+          <a href="../linking-remote-records/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Связывание с удалённой записью">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2048,7 +2044,7 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Ссылка на удаленную запись
+                Связывание с удалённой записью
               </div>
             </div>
           </a>
