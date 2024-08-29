@@ -1187,6 +1187,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../harvesting-geonetwork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сборщик данных GeoNetwork 2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../harvesting-csw/" class="md-nav__link">
         
   
@@ -1208,11 +1229,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-filesystem/" class="md-nav__link">
+      <a href="../harvesting-ogcwxs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Сбор метаданных с локальной файловой системы
+    Сбор из OGC-сервисов
   </span>
   
 
@@ -1229,11 +1250,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-geonetwork/" class="md-nav__link">
+      <a href="../harvesting-filesystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Сборщик данных GeoNetwork 2.0
+    Сбор метаданных с локальной файловой системы
   </span>
   
 
@@ -1276,27 +1297,6 @@
   
   <span class="md-ellipsis">
     Сбор по протоколу OAI-PMH
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-ogcwxs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Сбор из OGC-сервисов
   </span>
   
 
@@ -1464,15 +1464,6 @@
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       Пример сбора данных о границах подключенного геосервера (МАШИННЫЙ ПЕРЕВОД)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#philosopher-deegree-2x" class="md-nav__link">
-    <span class="md-ellipsis">
-      Пример базы данных Philosopher Deegree версии 2.x (МАШИННЫЙ ПЕРЕВОД)
     </span>
   </a>
   
@@ -1970,15 +1961,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#philosopher-deegree-2x" class="md-nav__link">
-    <span class="md-ellipsis">
-      Пример базы данных Philosopher Deegree версии 2.x (МАШИННЫЙ ПЕРЕВОД)
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2011,10 +1993,14 @@
 
 
 <h1 id="getfeature_harvester">Сбор метаданных с WFS-сервера</h1>
-<p>Метаданные могут присутствовать в таблицах реляционных баз данных, которые часто используются многими организациями. Использование протокола WFS поверх реляционной базы данных позволит извлекать метаданные с помощью стандартных механизмов запроса. Этот тип сбора данных позволяет пользователю задать запрос GetFeature и занести информацию из WFS-объектов, которую можно связать или скопировать в шаблон для создания записей метаданных.</p>
+<p>Метаданные могут присутствовать в таблицах реляционных баз данных, которые часто используются многими организациями. 
+Использование протокола WFS поверх реляционной базы данных позволит извлекать метаданные с помощью стандартных механизмов запроса. 
+Этот тип сбора данных позволяет пользователю задать запрос GetFeature, получить информацию из WFS-объектов и занести ей в шаблон для создания записей метаданных.</p>
 <h2 id="wfs-">Добавление WFS-сборщика</h2>
-<p>WFS реализует операцию запроса GetFeature, которая возвращает данные в виде объектов (обычно строк из таблиц в реляционной базе данных). GeoNetwork, действуя в качестве клиента, может прочитать ответ GetFeature и применить XLST-преобразование для создания фрагментов метаданных, которые можно связать или скопировать в предоставленный пользователем шаблон для создания записей метаданных.
-Доступны следующие опции:</p>
+<p>WFS реализует операцию запроса GetFeature, которая возвращает данные в виде объектов (обычно строк из таблиц в реляционной базе данных). 
+GeoNetwork, действуя в качестве клиента, может прочитать ответ GetFeature и применить XLST-преобразование для создания фрагментов метаданных, 
+которые можно связать или скопировать в предоставленный пользователем шаблон для создания записей метаданных.</p>
+<p>Доступны следующие опции:</p>
 <ul>
 <li><strong>Идентификация</strong> - параметры собранных данных в каталоге GeoNetwork.<ul>
 <li><em>Имя</em> - Это краткое описание удаленного сайта. Оно будет показано на главной странице сбора в качестве имени для этого экземпляра CSW-харвестера.</li>
@@ -2056,10 +2042,18 @@
 </li>
 </ul>
 <h2 id="getfeature">Подробнее о преобразовании ответа GetFeature во фрагменты метаданных</h2>
-<p>Внутри корневого элемента <record> может быть от нуля до множества элементов <record>. При генерации метаданных каждый элемент record приведет к созданию одного документа метаданных, в противном случае элемент <record> используется только для группировки фрагментов метаданных (например, фрагментов, сгенерированных для набора данных или объекта).</p>
-<p>Внутри элемента <record> может быть от нуля до множества элементов <fragment> и от нуля до множества элементов <replacementGroup>. Элемент <replacementGroup> сам может содержать от нуля до множества элементов <fragment>. Порядок расположения элементов <fragment> и <replacementGroup> внутри элемента <record> или <replacementGroup> не важен.</p>
-<p>Элементы <fragment> содержат отдельные xml-фрагменты. Содержимым <fragment> может быть любой xml-элемент из поддерживаемой схемы GeoNetwork при условии, что элемент должен содержать достаточное количество соответствующих метаданных, позволяющих идентифицировать целевую схему (т.е. различать пространства имен).</p>
-<p>Элементы <replacementGroup> имеют значение только при генерации метаданных. Они используются для группировки фрагментов для вставки или создания ссылок в копии шаблона метаданных, используемого для генерации метаданных. Если элемент <replacementGroup> не содержит элементов <fragment>, элемент, на который ссылается копия шаблона, будет удален, в противном случае он будет заменен содержимым фрагмента.</p>
+<p>Внутри корневого элемента <record> может быть от нуля до множества элементов <record>. 
+При генерации метаданных каждый элемент record приведет к созданию одного документа метаданных. 
+В противном случае элемент <record> используется только для группировки фрагментов метаданных (например, фрагментов, сгенерированных для набора данных или объекта).</p>
+<p>Внутри элемента <record> может быть от нуля до множества элементов <fragment> и от нуля до множества элементов <replacementGroup>. 
+Элемент <replacementGroup> сам может содержать от нуля до множества элементов <fragment>. 
+Порядок расположения элементов <fragment> и <replacementGroup> внутри элемента <record> или <replacementGroup> не важен.</p>
+<p>Элементы <fragment> содержат отдельные xml-фрагменты. Содержимым <fragment> может быть любой xml-элемент из поддерживаемой схемы GeoNetwork при условии, 
+что элемент должен содержать достаточное количество соответствующих метаданных, позволяющих идентифицировать целевую схему (т.е. различать пространства имен).</p>
+<p>Элементы <replacementGroup> имеют значение только при генерации метаданных. 
+Они используются для группировки фрагментов для вставки или создания ссылок в копии шаблона метаданных, используемого для генерации метаданных. 
+Если элемент <replacementGroup> не содержит элементов <fragment>, элемент, на который ссылается копия шаблона, будет удален. 
+В противном случае он будет заменен содержимым фрагмента.</p>
 <p>Допустимые атрибуты этих элементов и их функция заключаются в следующем:</p>
 <table>
 <thead>
@@ -2099,20 +2093,23 @@
 </table>
 <p>Ниже представлены 2 примера, как собирать метаданные из функций комбайна OGC WFS, используя таблицы стилей и шаблоны, поставляемые с GeoNetwork.</p>
 <h2 id="_1">Пример сбора данных о границах подключенного геосервера (МАШИННЫЙ ПЕРЕВОД)</h2>
-<p>В этом примере предполагается, что вы установили подключенный геосервер, который поставляется с GeoNetwork. Конечным результатом этого примера будет 251 запись метаданных ISO19139, которые содержат ссылки на 1506 фрагментов (по 6 на запись), созданных из ответа GetFeature для шейп-файла boundaries в экземпляре GeoServer, поставляемом с GeoNetwork. Созданные записи содержат метаданные о странах мира.</p>
-<p>Процедура, которой необходимо следовать, такова:</p>
+<p>В этом примере предполагается, что геосервер, который поставляется с GeoNetwork, был подключён. 
+Конечным результатом этого примера будет 251 запись метаданных ISO19139, которые содержат ссылки на 1506 фрагментов (по 6 на запись), 
+созданных из ответа GetFeature для шейп-файла boundaries в экземпляре GeoServer, поставляемом с GeoNetwork. Созданные записи содержат метаданные о странах мира.</p>
+<p>Нужно сделать следующие шаги:</p>
 <ul>
 <li>
-<p>В меню Администрирование-&gt;Конфигурация системы включите распознаватель XLink и <em>Сохраните</em> конфигурацию в базе данных.</p>
+<p>В <code>Администрирование</code>-&gt;<code>Настройки</code>-&gt;<code>XLink метаданных</code> включите распознаватель XLink и <em>Сохраните</em> конфигурацию в базе данных.</p>
 </li>
 <li>
-<p>Добавьте программу <em>OGC WFS GetFeature response</em> для сбора данных в меню Администрирование-&gt; Сбор данных.</p>
+<p>Добавьте сборщик <em>OGC WFS GetFeature</em> в меню <code>Администрирование</code>-&gt;<code>Сбор данных</code>.</p>
 </li>
 <li>
 <p>Присвойте ему <em>Имя</em> (например, gboundaries) и введите URL-адрес службы wfs из подключенного геосервера (например, <a href="http://localhost:8080/geoserver/wfs">http://localhost:8080/geoserver/wfs</a>) в поле <em>URL-адрес службы</em>.</p>
 </li>
 <li>
-<p>Мы будем использовать простой запрос GetFeature, чтобы выбрать все страны из шейп-файла boundaries, расположенного за WFS. XML для такого запроса (который должен быть введен в текстовую область <em>GetFeature Query</em>), является:</p>
+<p>Далее будет использован простой запрос GetFeature, чтобы выбрать все страны из шейп-файла boundaries, расположенного за WFS. 
+  XML для такого запроса (который должен быть введен в текстовую область <em>GetFeature Query</em>), является:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;wfs:GetFeature</span><span class="w"> </span><span class="na">service=</span><span class="s">&quot;WFS&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.1.0&quot;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs&quot;</span><span class="nt">&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -2122,7 +2119,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Выберите схему вывода - мы выберем <em>iso19139</em>, поскольку в этой схеме есть примеры таблиц стилей и шаблонов, которые нам нужны для этого примера. Обратите внимание, что после выбора этого параметра становятся видны следующие параметры, и мы предпримем следующие действия:</p>
+<p>Выберите схему <em>iso19139</em>, поскольку в этой схеме есть примеры таблиц стилей и шаблонов, которые нужны для этого примера. Обратите внимание, что после выбора этого параметра становятся видны следующие параметры, и мы предпримем следующие действия:</p>
 <ul>
 <li>Выберите прилагаемую таблицу стилей "geoserver_boundary_fragments", чтобы извлечь фрагменты из ответа GetFeature в раскрывающемся списке "Таблица стилей", который будет использоваться для создания фрагментов. Эту таблицу стилей можно найти в "GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments`.</li>
 <li>Выберите прилагаемый шаблон "Geoserver WFS Fragments Country Boundaries Test Template" из раскрывающегося списка <em>, который будет использоваться для создания метаданных с использованием фрагментов</em>. Этот шаблон можно найти в разделе "GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/templates/geoserver_fragment_tester.xml`.</li>
@@ -2135,55 +2132,10 @@
 <p><em>Сохраните</em> форму заявки на участие в харвестере.</p>
 </li>
 <li>
-<p>Вы вернетесь в меню "Операции с харвестером", где сможете "Активировать" харвестер, а затем "Запустить" его.</p>
+<p>Вернитесь в меню "Операции с харвестером", где сможете "Активировать" харвестер, а затем "Запустить" его.</p>
 </li>
 </ul>
 <p>На странице результатов показано, что из ответа WFS GetFeature было получено 1506 фрагментов метаданных. Они были сохранены в базе данных GeoNetwork в виде подшаблонов и связаны с шаблоном метаданных для формирования 251 новой записи метаданных.</p>
-<h2 id="philosopher-deegree-2x">Пример базы данных Philosopher Deegree версии 2.x (МАШИННЫЙ ПЕРЕВОД)</h2>
-<p>В этом примере предполагается, что вы скачали версию 2.x Deegree и загрузили базу данных Philosopher example. Конечным результатом этого примера будут 7 записей метаданных ISO 19139, которые содержат ссылки на 42 фрагмента (по 6 на запись), созданные на основе ответа GetFeature от вашей установки deegree. Записи содержат метаданные о 7 известных философах.</p>
-<p>Процедура, которой следует следовать, такова:</p>
-<ul>
-<li>
-<p>В меню Администрирование-&gt;Конфигурация системы включите распознаватель XLink и <em>Сохраните</em> конфигурацию в базе данных.</p>
-</li>
-<li>
-<p>Добавьте ответ <em>OGC WFS GetFeature response</em> для харвестера из меню Администрирование-&gt; Сбор урожая.</p>
-</li>
-<li>
-<ul>
-<li>Присвойте ему <em>имя</em> (например, deegree22-philosopher-test) и введите URL-адрес вашей установки degree 2.2 в поле <em>Service URL</em>.</li>
-</ul>
-</li>
-<li>
-<p>Мы будем использовать простой запрос GetFeature, чтобы выбрать всех философов из базы данных в рамках WFS. XML для такого запроса (который должен быть введен в текстовую область <em>GetFeature Query</em>) является:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;wfs:GetFeature</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.1.0&quot;</span><span class="w"> </span><span class="na">xmlns:app=</span><span class="s">&quot;http://www.deegree.org/app&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">           </span><span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">   </span><span class="cm">&lt;!-- request all Philosopher instances --&gt;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">   </span><span class="nt">&lt;wfs:Query</span><span class="w"> </span><span class="na">typeName=</span><span class="s">&quot;app:Philosopher&quot;</span><span class="nt">/&gt;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nt">&lt;/wfs:GetFeature&gt;</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>Choose an output schema - we'll choose <em>iso19139</em> as this schema has the example stylesheets and templates we need for this example. Notice that after this option is chosen the following options become visible and we'll take the following actions:</p>
-<ul>
-<li>Choose the supplied 'deegree2_philosopher_fragments' stylesheet to extract fragments from the GetFeature response in the <em>Stylesheet to use to create fragments</em> pull-down list. This stylesheet can be found in <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments</code>.</li>
-<li>Select the supplied 'Deegree 22 WFS Fragments Philosopher Database Test Template' template from the <em>Template to use to build metadata using fragments</em> pull-down list. This template can be found in <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/templates/deegree_fragment_tester.xml</code>.</li>
-</ul>
-</li>
-<li>
-<p>Choose a category for the records created by the harvester, check the <em>One run only</em> box, add some privileges (simplest is to let All users have View rights). At this stage your harvester entry form should look like the following screenshot.</p>
-</li>
-<li>
-<p><em>Save</em> the harvester entry form.</p>
-</li>
-<li>
-<p>You will be returned to the harvester operations menu where you can <em>Activate</em> the harvester and then <em>Run</em> it.</p>
-</li>
-</ul>
-<p>After the harvester has been run you should see a results screen that looks something like the following screenshot.</p>
-<p>The results page shows that there were 42 fragments of metadata harvested from the WFS GetFeature response. They were saved to the GeoNetwork database as subtemplates and linked into the metadata template to form 7 new metadata records.</p>
 
 
 

@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://silkov78.github.io/geonetwork-html-ru/ru/user-guide/harvesting/harvesting-ogcwxs/">
       
       
-        <link rel="prev" href="../harvesting-oaipmh/">
+        <link rel="prev" href="../harvesting-csw/">
       
       
-        <link rel="next" href="../harvesting-sde/">
+        <link rel="next" href="../harvesting-filesystem/">
       
       
       <link rel="icon" href="../../../../assets/images/geonetwork-logo.png">
@@ -1187,48 +1187,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-csw/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Сбор метаданных из CSW-сервисов
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-filesystem/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Сбор метаданных с локальной файловой системы
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../harvesting-geonetwork/" class="md-nav__link">
         
   
@@ -1250,32 +1208,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-geoportal/" class="md-nav__link">
+      <a href="../harvesting-csw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Сбор данных по протоколу GeoPortal REST
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-oaipmh/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Сбор по протоколу OAI-PMH
+    Сбор метаданных из CSW-сервисов
   </span>
   
 
@@ -1350,6 +1287,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harvesting-filesystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сбор метаданных с локальной файловой системы
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harvesting-geoportal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сбор данных по протоколу GeoPortal REST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harvesting-oaipmh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сбор по протоколу OAI-PMH
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1957,7 +1957,9 @@
 
 
 <h1 id="ogcwxs_harvester">Сбор из OGC-сервисов</h1>
-<p>OGC-сервисы реализует операцию <a href="https://docs.geoserver.org/stable/en/user/services/wms/reference.html#getcapabilities">GetCapabilities</a>. Выступая в качестве клиента, GeoNetwork может использовать результаты запроса GetCapabilities <strong>для создания метаданных</strong> для OGC-сервисов (ISO19119) и ресурсов, предоставляемых сервисом (ISO19115/19139). Этот сборщик поддерживает следующие типы OGC-сервисов:</p>
+<p>OGC-сервисы реализует операцию <a href="https://docs.geoserver.org/stable/en/user/services/wms/reference.html#getcapabilities">GetCapabilities</a>. 
+Выступая в качестве клиента, GeoNetwork может использовать результаты запроса GetCapabilities <strong>для формирования метаданных</strong> для OGC-сервисов (ISO19119) и ресурсов, 
+предоставляемых сервисом (ISO19115/19139). Этот сборщик поддерживает следующие типы OGC-сервисов:</p>
 <ul>
 <li>Web Map Service (WMS) - версии 1.0.0, 1.1.1, 1.3.0</li>
 <li>Web Feature Service (WFS) - версии 1.0.0 и 1.1.0</li>
@@ -2018,9 +2020,12 @@
 <div class="admonition примечание">
 <p class="admonition-title">Примечание</p>
 <ul>
-<li>При каждом запуске сборщик будет удалять ранее собранные записи и создавать новые. GeoNetwork будет генерировать uuid для всех метаданных (как служебных, так и наборов данных). Исключением из этого правила являются метаданные наборов данных, созданные с помощью тега MetadataUrl в документе GetCapabilities, в этом случае вместо uuid используется uuid удаленного XML-документа.</li>
-<li>логотипы могут быть сгенерированы только при сборе веб-картографического сервиса OGC (WMS). WMS должна поддерживать проекцию WGS84</li>
-<li>выбранная <em>Целевая схема</em> должна иметь поддержку XSLT, которые используются сборщиком для преобразования запроса GetCapabilities в записи метаданных из этой схемы. Обычно используется iso19139.</li>
+<li>При каждом запуске сборщик будет удалять ранее собранные записи и создавать новые. 
+    GeoNetwork будет генерировать uuid для всех метаданных (как служебных, так и наборов данных). 
+    Исключением из этого правила являются метаданные наборов данных, созданные с помощью тега MetadataUrl в документе GetCapabilities. 
+    В этом случае вместо uuid используется uuid удаленного XML-документа.</li>
+<li>Логотипы (миниатюры) для метаданных могут быть сгенерированы только при сборе из WMS-сервера. WMS должна поддерживать проекцию WGS84</li>
+<li>Выбранная <em>Целевая схема</em> должна иметь поддержку XSLT, которые используются сборщиком для преобразования запроса GetCapabilities в записи метаданных из этой схемы. Обычно используется iso19139.</li>
 </ul>
 </div>
 
@@ -2060,7 +2065,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../harvesting-oaipmh/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Сбор по протоколу OAI-PMH">
+          <a href="../harvesting-csw/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Сбор метаданных из CSW-сервисов">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2070,20 +2075,20 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Сбор по протоколу OAI-PMH
+                Сбор метаданных из CSW-сервисов
               </div>
             </div>
           </a>
         
         
           
-          <a href="../harvesting-sde/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Сбор данных из ARCSDE-узла">
+          <a href="../harvesting-filesystem/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Сбор метаданных с локальной файловой системы">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                Сбор данных из ARCSDE-узла
+                Сбор метаданных с локальной файловой системы
               </div>
             </div>
             <div class="md-footer__button md-icon">

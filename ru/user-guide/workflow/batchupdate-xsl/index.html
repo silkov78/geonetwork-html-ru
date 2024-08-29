@@ -24,7 +24,7 @@
     
     
       
-        <title>Обновление набора записей с помощью XSLT - GeoNetwork (RU)</title>
+        <title>Пакетное редактирование с помощью XSLT - GeoNetwork (RU)</title>
       
     
     
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Обновление набора записей с помощью XSLT
+              Пакетное редактирование с помощью XSLT
             
           </span>
         </div>
@@ -1147,7 +1147,7 @@
             
   
   <span class="md-ellipsis">
-    Обновление набора записей
+    Пакетное редактирование
   </span>
   
 
@@ -1157,7 +1157,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_9_2">
             <span class="md-nav__icon md-icon"></span>
-            Обновление набора записей
+            Пакетное редактирование
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1193,7 +1193,7 @@
         
   
   <span class="md-ellipsis">
-    Редактирование набора записей
+    Пакетное редактирование из консоли редактора
   </span>
   
 
@@ -1244,7 +1244,7 @@
           
   
   <span class="md-ellipsis">
-    Обновление набора записей с помощью XSLT
+    Пакетное редактирование с помощью XSLT
   </span>
   
 
@@ -1255,7 +1255,7 @@
         
   
   <span class="md-ellipsis">
-    Обновление набора записей с помощью XSLT
+    Пакетное редактирование с помощью XSLT
   </span>
   
 
@@ -2148,11 +2148,12 @@
   
 
 
-<h1 id="batchupdate_xsl">Обновление набора записей с помощью XSLT</h1>
+<h1 id="batchupdate_xsl">Пакетное редактирование с помощью XSLT</h1>
 <h2 id="batch-process-apply">Применение изменений</h2>
-<p>Пользователь-администратор может использовать API каталога для обновления набора записей с помощью <a href="https://ru.wikipedia.org/wiki/XSLT">XSLT-преобразования</a>. Для этого необходимо выполнить следующие действия:</p>
+<p>Пользователь-администратор может использовать API каталога для обновления набора записей с помощью <a href="https://ru.wikipedia.org/wiki/XSLT">XSLT-преобразования</a>. 
+Для этого необходимо выполнить следующие действия:</p>
 <ul>
-<li>Войти в систему под именем пользователя admin</li>
+<li>Войти в систему в качестве администратора</li>
 <li>Найти записи для обновления с помощью <a href="../../../api/search/">Q-поиска</a>. Например, выбор всех шаблонов в определенном стандарте: <a href="http://localhost:8080/geonetwork/srv/eng/q?_schema=iso19115-3&amp;_isTemplate=y">http://localhost:8080/geonetwork/srv/eng/q?_schema=iso19115-3&amp;_isTemplate=y</a>.</li>
 <li>Выбрать все записи, соответствующие поиску, с помощью <a href="http://localhost:8080/geonetwork/srv/eng/metadata.select?selected=add-all">http://localhost:8080/geonetwork/srv/eng/metadata.select?selected=add-all</a>.</li>
 <li>Запустить процесс с помощью <a href="http://localhost:8080/geonetwork/srv/eng/md.processing.batch?process=my-custom-process">http://localhost:8080/geonetwork/srv/eng/md.processing.batch?process=my-custom-process</a>.</li>
@@ -2167,19 +2168,24 @@
 <li>Количество записей, для которых процесс не определен в стандарте</li>
 <li>Количество записей, которые текущий пользователь не может редактировать.</li>
 </ul>
-<p>Процесс также может быть применен к одной записи метаданных с помощью сервиса <code>md.processing</code>. Например, <a href="http://localhost:8080/geonetwork/srv/eng/md.processing?uuid=46eac9e4-33cb-45b7-a104-7bcc8e654c98&amp;process=keywords-mapper&amp;search=water&amp;replace=Water">http://localhost:8080/geonetwork/srv/eng/md.processing?uuid=46eac9e4-33cb-45b7-a104-7bcc8e654c98&amp;process=keywords-mapper&amp;search=water&amp;replace=Water</a>.</p>
+<p>Процесс также может быть применен к одной записи метаданных с помощью сервиса <code>md.processing</code>. 
+Например, <a href="http://localhost:8080/geonetwork/srv/eng/md.processing?uuid=46eac9e4-33cb-45b7-a104-7bcc8e654c98&amp;process=keywords-mapper&amp;search=water&amp;replace=Water">http://localhost:8080/geonetwork/srv/eng/md.processing?uuid=46eac9e4-33cb-45b7-a104-7bcc8e654c98&amp;process=keywords-mapper&amp;search=water&amp;replace=Water</a>.</p>
 <p>Параметрами являются:</p>
 <ul>
 <li>uuid или id: UUID метаданных или внутренний идентификатор метаданных</li>
 <li>процесс: Идентификатор процесса</li>
-<li>добавьте другие дополнительные параметры в зависимости от процесса (см. ниже).</li>
+<li>добавить другие дополнительные параметры в зависимости от процесса (см. ниже).</li>
 </ul>
 <h2 id="batch-process-add">Добавление пакетного процесса</h2>
 <h3 id="_1">Создание файла обработки</h3>
-<p>Пакетные процессы определяются на основе каждого стандарта метаданных. Чтобы проверить список доступных процессов для стандарта, проверьте папку <code>&lt;datadirectory&gt;/config/schemaPlugins/&lt;schemaId&gt;/process</code>.</p>
-<p>Папка <code>process</code> содержит набор XSLT-преобразований. Имя XSLT-файла без расширения используется для запуска процесса. Например, если используется <code>md.processing.batch?process=my-custom-process</code>, XSLT процесса ДОЛЖЕН иметь имя <code>my-custom-process.xsl</code>.</p>
+<p>Пакетные процессы определяются на основе каждого стандарта метаданных. 
+Чтобы проверить список доступных процессов для стандарта, проверьте папку <code>&lt;datadirectory&gt;/config/schemaPlugins/&lt;schemaId&gt;/process</code>.</p>
+<p>Папка <code>process</code> содержит набор XSLT-преобразований. Имя XSLT-файла без расширения используется для запуска процесса. 
+Например, если используется <code>md.processing.batch?process=my-custom-process</code>, XSLT процесса ДОЛЖЕН иметь имя <code>my-custom-process.xsl</code>.</p>
 <h3 id="xml">Обработка XML записи</h3>
-<p>Процесс XSLT будет применен к каждой записи метаданных в подборке. Каждый документ будет иметь в качестве корневого элемента XML-документ метаданных с элементом <code>geonet:info</code>. Элемент <code>geonet:info</code> содержит метаданные о метаданных. Этот элемент ДОЛЖЕН быть удален процессом, чтобы не изменять запись при сохранении в базе данных.</p>
+<p>Процесс XSLT будет применен к каждой записи метаданных в подборке. 
+Каждый документ будет иметь в качестве корневого элемента XML-документ метаданных с элементом <code>geonet:info</code>. 
+Элемент <code>geonet:info</code> содержит метаданные о метаданных. Этот элемент ДОЛЖЕН быть удален процессом, чтобы не изменять запись при сохранении в базе данных.</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;gmd:MD_Metadata&gt;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>...
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;geonet:info</span><span class="w"> </span><span class="na">xmlns:geonet=</span><span class="s">&quot;http://www.fao.org/geonetwork&quot;</span><span class="nt">&gt;</span>
@@ -2203,14 +2209,16 @@
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">&lt;/gmd:MD_Metadata&gt;</span>
 </span></code></pre></div>
 <h3 id="_2">Добавление параметров</h3>
-<p>XSLT-процесс может получить параметры, которые могут быть указаны в URL с помощью <code>xsl:param</code>. Например, при использовании <code>md.processing.batch?process=my-custom-process&amp;myParameter=test</code>.</p>
+<p>XSLT-процесс может получить параметры, которые могут быть указаны в URL с помощью <code>xsl:param</code>. 
+Например, при использовании <code>md.processing.batch?process=my-custom-process&amp;myParameter=test</code>.</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">&lt;xsl:stylesheet</span><span class="w"> </span><span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">                </span><span class="na">exclude-result-prefixes=</span><span class="s">&quot;#all&quot;</span><span class="nt">&gt;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;xsl:param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myParameter&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;&#39;&#39;&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
-<p>В этом примере <code>xsl:param</code> будет доступен как переменная с помощью <code>$myParameter</code> и будет иметь пустое значение, если не задан параметр URL. Чтобы проверить, правильно ли задан параметр, используйте <code>xsl:message</code> для вывода информации в файл журнала.</p>
+<p>В этом примере <code>xsl:param</code> будет доступен как переменная с помощью <code>$myParameter</code> и будет иметь пустое значение, если не задан параметр URL. 
+Чтобы проверить, правильно ли задан параметр, используйте <code>xsl:message</code> для вывода информации в файл журнала.</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;xsl:param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myParameter&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;&#39;&#39;&quot;</span><span class="nt">/&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">&lt;xsl:message&gt;</span>myParameter:<span class="w"> </span><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;$myParameter&quot;</span><span class="nt">/&gt;&lt;/xsl:message&gt;</span>
 </span></code></pre></div>
@@ -2246,7 +2254,7 @@
 </span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="nt">&lt;xsl:template</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;geonet:*&quot;</span><span class="w"> </span><span class="na">priority=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="nt">&lt;/xsl:stylesheet&gt;</span>
 </span></code></pre></div>
-<p>Затем можно настраивать само обновление записи метаданных.</p>
+<p>Затем можно редактировать саму запись метаданных.</p>
 <h3 id="_3">Примеры обработки</h3>
 <p>Примеры смотрите в <code>schemas/iso19139/src/main/plugin/iso19139/process</code>.</p>
 <p>В дополнение к минимуму, который процесс ДОЛЖЕН выполнять, процесс может определять дополнительные действия, используя новые шаблоны:</p>
@@ -2256,11 +2264,12 @@
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;xsl:template</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;gmd:report[gmd:DQ_TopologicalConsistency]&quot;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">              </span><span class="na">priority=</span><span class="s">&quot;2&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
-<p>Установите приоритет на 2, чтобы ваш шаблон имел приоритет над основным шаблоном, создающим копии всего.</p>
+<p>Установите приоритет на 2, чтобы шаблон имел приоритет над основным шаблоном, создающим копии всего.</p>
 <h2 id="customizing-xslt-suggestion">Регистрация процесса в качестве подказки</h2>
 <p>См. <a href="../suggestion/">Предложение по улучшению содержания метаданных</a>.</p>
 <h2 id="xslt-in-editor">Регистрация процесса в качестве действия редактора</h2>
-<p>XSLT-процесс может использоваться в редакторе для запуска определенных действий. Например, в представлении INSPIRE отображается кнопка для добавления идентификатора ресурса, если он не определен, заканчиваясь идентификатором метаданных.
+<p>XSLT-процесс может использоваться в редакторе для запуска определенных действий. 
+Например, в представлении INSPIRE отображается кнопка для добавления идентификатора ресурса, если он не определен, заканчиваясь идентификатором метаданных.
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;action</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;batch&quot;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">        </span><span class="na">process=</span><span class="s">&quot;add-resource-id&quot;</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">        </span><span class="na">if=</span><span class="s">&quot;count(gmd:MD_Metadata/gmd:identificationInfo/*/</span>
@@ -2273,7 +2282,8 @@
 </span></code></pre></div></p>
 <p>См. ссылку:<code>creating-custom-editor</code>.</p>
 <h2 id="customizing-xslt-conversion">Добавление XSLT-преобразования для импорта</h2>
-<p>Добавление XSLT-преобразования в папку <code>web/geonetwork/xsl/conversion/import</code> предоставляет пользователю новые возможности импорта. Файлы могут быть добавлены в эту папку без перезапуска приложения.</p>
+<p>Добавление XSLT-преобразования в папку <code>web/geonetwork/xsl/conversion/import</code> предоставляет пользователю новые возможности импорта. 
+Файлы могут быть добавлены в эту папку без перезапуска приложения.</p>
 
 
 

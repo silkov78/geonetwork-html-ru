@@ -1187,6 +1187,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../harvesting-geonetwork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сборщик данных GeoNetwork 2.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../harvesting-csw/" class="md-nav__link">
         
   
@@ -1208,11 +1229,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-filesystem/" class="md-nav__link">
+      <a href="../harvesting-ogcwxs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Сбор метаданных с локальной файловой системы
+    Сбор из OGC-сервисов
   </span>
   
 
@@ -1229,11 +1250,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-geonetwork/" class="md-nav__link">
+      <a href="../harvesting-filesystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Сборщик данных GeoNetwork 2.0
+    Сбор метаданных с локальной файловой системы
   </span>
   
 
@@ -1276,27 +1297,6 @@
   
   <span class="md-ellipsis">
     Сбор по протоколу OAI-PMH
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-ogcwxs/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Сбор из OGC-сервисов
   </span>
   
 
@@ -1957,7 +1957,9 @@
 
 
 <h1 id="webdav_harvester">Сбор данных по протоколу WEBDAV</h1>
-<p>Этот тип сбора данных использует протокол WebDAV ((Distributed Authoring and Versioning) или протокол WAF (web accessible folder) для сбора метаданных с веб-сервера. Это может быть полезно пользователям, которые хотят публиковать свои метаданные через веб-сервер, который предлагает интерфейс DAV. Протокол позволяет извлекать содержимое веб-страницы (список файлов) вместе с датой изменения.</p>
+<p>Этот тип сбора данных использует протокол WebDAV ((Distributed Authoring and Versioning) или протокол WAF (web accessible folder) для сбора метаданных с веб-сервера. 
+Это может быть полезно пользователям, которые хотят публиковать свои метаданные через веб-сервер, который предлагает интерфейс DAV. 
+Протокол позволяет извлекать содержимое веб-страницы (список файлов) вместе с датой изменения.</p>
 <h2 id="webdav-">Добавление WebDAV-сборщика</h2>
 <p>Нажмите <code>Собрать из</code> - <code>WEBDAV/WAF</code>, чтобы создать сборщика метаданных по протоколам WEBDAV и WAF. Доступные параметры следующие:</p>
 <ul>
@@ -1994,7 +1996,8 @@
 </ul>
 <div class="admonition примечание">
 <p class="admonition-title">Примечание</p>
-<p>Одни и те же метаданные могут быть собраны несколько раз разными WebDAV-сборщиками. Это не лучшая хорошая практика, поскольку копии одной и той же записи метаданных будут иметь разные UUID..</p>
+<p>Одни и те же метаданные могут быть собраны несколько раз разными WebDAV-сборщиками. 
+Это не лучшая хорошая практика, поскольку копии одной и той же записи метаданных будут иметь разные UUID..</p>
 </div>
 
 
