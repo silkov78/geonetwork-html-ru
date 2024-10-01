@@ -1,12 +1,12 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ru" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="GeoNetwork catalogue for listing, searching and reviewing records.">
+        <meta name="description" content="Добро пожаловать на GeoNetwork. Данная документация разделена на отдельные гайды по различным темам.">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>WFS GetFeature Harvesting - GeoNetwork opensource (EN)</title>
+        <title>Сбор метаданных с WFS-сервера - GeoNetwork (RU)</title>
       
     
     
@@ -79,7 +79,7 @@
       
         
         <a href="#getfeature_harvester" class="md-skip">
-          Skip to content
+          Перейти к содержанию
         </a>
       
     </div>
@@ -95,8 +95,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="https://geonetwork-opensource.org/" title="GeoNetwork opensource (EN)" class="md-header__button md-logo" aria-label="GeoNetwork opensource (EN)" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="https://geonetwork-opensource.org/" title="GeoNetwork (RU)" class="md-header__button md-logo" aria-label="GeoNetwork (RU)" data-md-component="logo">
       
   <img src="../../../assets/images/geonetwork-logo.svg" alt="logo">
 
@@ -109,13 +109,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            GeoNetwork opensource (EN)
+            GeoNetwork (RU)
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WFS GetFeature Harvesting
+              Сбор метаданных с WFS-сервера
             
           </span>
         </div>
@@ -155,20 +155,20 @@
       <div class="md-header__option">
   <div class="md-select">
     
-    <button class="md-header__button md-icon" aria-label="Select language">
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
     </button>
     <div class="md-select__inner">
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="./" hreflang="en" class="md-select__link">
+            <a href="../../../en/user-guide/harvesting/harvesting-wfs-features/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="../../../ru/user-guide/harvesting/harvesting-wfs-features/" hreflang="ru" class="md-select__link">
+            <a href="./" hreflang="ru" class="md-select__link">
               Русский
             </a>
           </li>
@@ -187,16 +187,16 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Search">
+      <nav class="md-search__options" aria-label="Поиск">
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -207,7 +207,7 @@
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            Инициализация поиска
           </div>
           <ol class="md-search-result__list" role="presentation"></ol>
         </div>
@@ -218,7 +218,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/geonetwork/core-geonetwork" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/geonetwork/core-geonetwork" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -239,7 +239,7 @@
         
           
             
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
@@ -267,32 +267,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../overview/" class="md-tabs__link">
-          
-  
-    
-  
-  Overview
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
         <a href="../../../help/" class="md-tabs__link">
           
   
     
   
-  Help
+  Помощь
 
         </a>
       </li>
@@ -314,7 +294,7 @@
   
     
   
-  User Guide
+  Пользователям
 
         </a>
       </li>
@@ -329,92 +309,12 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../maintainer-guide/" class="md-tabs__link">
+        <a href="../../../administrator-guide/" class="md-tabs__link">
           
   
     
   
-  Maintainer Guide
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../api/" class="md-tabs__link">
-          
-  
-    
-  
-  API
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../devel/" class="md-tabs__link">
-          
-  
-    
-  
-  Development
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../tutorials/" class="md-tabs__link">
-          
-  
-    
-  
-  Tutorials
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../../annexes/" class="md-tabs__link">
-          
-  
-    
-  
-  Annexes
+  Администрирование
 
         </a>
       </li>
@@ -442,18 +342,18 @@
   
 
 
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://geonetwork-opensource.org/" title="GeoNetwork opensource (EN)" class="md-nav__button md-logo" aria-label="GeoNetwork opensource (EN)" data-md-component="logo">
+    <a href="https://geonetwork-opensource.org/" title="GeoNetwork (RU)" class="md-nav__button md-logo" aria-label="GeoNetwork (RU)" data-md-component="logo">
       
   <img src="../../../assets/images/geonetwork-logo.svg" alt="logo">
 
     </a>
-    GeoNetwork opensource (EN)
+    GeoNetwork (RU)
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/geonetwork/core-geonetwork" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/geonetwork/core-geonetwork" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
@@ -523,67 +423,11 @@
         
   
   
-    <a href="../../../overview/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
     <a href="../../../help/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
-    Help
+    Помощь
   </span>
   
 
@@ -637,8 +481,6 @@
       
         
           
-        
-      
         
       
     
@@ -656,7 +498,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
@@ -665,23 +507,23 @@
               
   
   <span class="md-ellipsis">
-    User Guide
+    Пользователям
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            User Guide
+            Пользователям
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -698,7 +540,7 @@
         
   
   <span class="md-ellipsis">
-    Quick start
+    Быстрый старт
   </span>
   
 
@@ -719,7 +561,7 @@
         
   
   <span class="md-ellipsis">
-    Maps and dataset visualisation
+    Карты и визуализация данных
   </span>
   
 
@@ -776,7 +618,7 @@
       
   
   <span class="md-ellipsis">
-    Describing Information
+    Описание информации
   </span>
   
 
@@ -813,24 +655,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
       
@@ -851,7 +675,7 @@
       
   
   <span class="md-ellipsis">
-    Associating Resources
+    Связывание со сторонними ресурсами
   </span>
   
 
@@ -904,7 +728,7 @@
       
   
   <span class="md-ellipsis">
-    Tag information
+    Использование тегов
   </span>
   
 
@@ -959,7 +783,7 @@
       
   
   <span class="md-ellipsis">
-    Publishing
+    Публикация
   </span>
   
 
@@ -1012,7 +836,7 @@
       
   
   <span class="md-ellipsis">
-    Analyzing
+    Анализ
   </span>
   
 
@@ -1053,12 +877,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
       
@@ -1079,7 +897,7 @@
       
   
   <span class="md-ellipsis">
-    Workflow
+    Рабочий процесс
   </span>
   
 
@@ -1144,7 +962,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" checked>
         
           
           
@@ -1153,68 +971,26 @@
               
   
   <span class="md-ellipsis">
-    Harvesting
+    Сборщики данных
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
-            Harvesting
+            Сборщики данных
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-csw/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Harvesting CSW services
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-filesystem/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Local File System Harvesting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -1228,7 +1004,7 @@
         
   
   <span class="md-ellipsis">
-    GeoNetwork 2.0 Harvester
+    Сборщик данных GeoNetwork 2.0
   </span>
   
 
@@ -1245,32 +1021,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../harvesting-geoportal/" class="md-nav__link">
+      <a href="../harvesting-csw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    GeoPortal REST Harvesting
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../harvesting-oaipmh/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    OAIPMH Harvesting
+    Сбор метаданных из CSW-сервисов
   </span>
   
 
@@ -1291,7 +1046,70 @@
         
   
   <span class="md-ellipsis">
-    Harvesting OGC Services
+    Сбор из OGC-сервисов
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harvesting-filesystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сбор метаданных с локальной файловой системы
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harvesting-geoportal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сбор данных по протоколу GeoPortal REST
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../harvesting-oaipmh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Сбор по протоколу OAI-PMH
   </span>
   
 
@@ -1312,7 +1130,7 @@
         
   
   <span class="md-ellipsis">
-    Harvesting an ARCSDE Node
+    Сбор данных из ARCSDE-узла
   </span>
   
 
@@ -1333,7 +1151,7 @@
         
   
   <span class="md-ellipsis">
-    Simple URL harvesting (opendata)
+    Сбор данных по обычному URL (открытые источники)
   </span>
   
 
@@ -1354,7 +1172,7 @@
         
   
   <span class="md-ellipsis">
-    THREDDS Harvesting
+    Сбор данных из THREDDS-каталогов
   </span>
   
 
@@ -1375,7 +1193,7 @@
         
   
   <span class="md-ellipsis">
-    WEBDAV Harvesting
+    Сбор данных по протоколу WEBDAV
   </span>
   
 
@@ -1405,7 +1223,7 @@
           
   
   <span class="md-ellipsis">
-    WFS GetFeature Harvesting
+    Сбор метаданных с WFS-сервера
   </span>
   
 
@@ -1416,7 +1234,7 @@
         
   
   <span class="md-ellipsis">
-    WFS GetFeature Harvesting
+    Сбор метаданных с WFS-сервера
   </span>
   
 
@@ -1424,7 +1242,7 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
   
   
   
@@ -1433,41 +1251,32 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Содержание
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-an-ogc-wfs-getfeature-harvester" class="md-nav__link">
+  <a href="#wfs-" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding an OGC WFS GetFeature Harvester
+      Добавление WFS-сборщика
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#more-about-turning-the-getfeature-response-into-metadata-fragments" class="md-nav__link">
+  <a href="#getfeature" class="md-nav__link">
     <span class="md-ellipsis">
-      More about turning the GetFeature Response into metadata fragments
+      Подробнее о преобразовании ответа GetFeature во фрагменты метаданных
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bundled-geoserver-boundaries-harvest-example" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Bundled GeoServer Boundaries Harvest example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deegree-version-2x-philosopher-database-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deegree Version 2.x Philosopher Database example
+      Пример сбора данных о границах подключенного геосервера (МАШИННЫЙ ПЕРЕВОД)
     </span>
   </a>
   
@@ -1501,7 +1310,7 @@
         
   
   <span class="md-ellipsis">
-    Exporting records
+    Экспорт записей метаданных
   </span>
   
 
@@ -1511,8 +1320,15 @@
 
               
             
-              
-                
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
   
   
   
@@ -1552,301 +1368,7 @@
       
   
   <span class="md-ellipsis">
-    Administration
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../maintainer-guide/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Maintainer Guide
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../api/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    API
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../devel/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Development
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../tutorials/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Tutorials
-  </span>
-  
-
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
-  
-
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
-  
-  
-    <a href="../../../annexes/" class="md-nav__link">
-      
-  
-  <span class="md-ellipsis">
-    Annexes
+    Администрирование
   </span>
   
 
@@ -1874,7 +1396,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
   
   
   
@@ -1883,41 +1405,32 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      Содержание
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#adding-an-ogc-wfs-getfeature-harvester" class="md-nav__link">
+  <a href="#wfs-" class="md-nav__link">
     <span class="md-ellipsis">
-      Adding an OGC WFS GetFeature Harvester
+      Добавление WFS-сборщика
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#more-about-turning-the-getfeature-response-into-metadata-fragments" class="md-nav__link">
+  <a href="#getfeature" class="md-nav__link">
     <span class="md-ellipsis">
-      More about turning the GetFeature Response into metadata fragments
+      Подробнее о преобразовании ответа GetFeature во фрагменты метаданных
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bundled-geoserver-boundaries-harvest-example" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Bundled GeoServer Boundaries Harvest example
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deegree-version-2x-philosopher-database-example" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deegree Version 2.x Philosopher Database example
+      Пример сбора данных о границах подключенного геосервера (МАШИННЫЙ ПЕРЕВОД)
     </span>
   </a>
   
@@ -1938,7 +1451,7 @@
                   
 
   
-    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/en/user-guide/harvesting/harvesting-wfs-features.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/edit/main/docs/manual/docs/ru/user-guide/harvesting/harvesting-wfs-features.md" title="Редактировать страницу" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1947,96 +1460,131 @@
     
       
     
-    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/en/user-guide/harvesting/harvesting-wfs-features.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/geonetwork/core-geonetwork/raw/main/docs/manual/docs/ru/user-guide/harvesting/harvesting-wfs-features.md" title="Посмотреть исходный код страницы" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="getfeature_harvester">WFS GetFeature Harvesting</h1>
-<p>Metadata can be present in the tables of a relational databases, which are commonly used by many organisations. Putting an OGC Web Feature Service (WFS) over a relational database will allow metadata to be extracted via standard query mechanisms. This harvesting type allows the user to specify a GetFeature query and map information from the features to fragments of metadata that can be linked or copied into a template to create metadata records.</p>
-<h2 id="adding-an-ogc-wfs-getfeature-harvester">Adding an OGC WFS GetFeature Harvester</h2>
-<p>An OGC web feature service (WFS) implements a GetFeature query operation that returns data in the form of features (usually rows from related tables in a relational database). GeoNetwork, acting as a client, can read the GetFeature response and apply a user-supplied XSLT stylesheet to produce metadata fragments that can be linked or copied into a user-supplied template to build metadata records.</p>
-<p>The available options are:</p>
+<h1 id="getfeature_harvester">Сбор метаданных с WFS-сервера</h1>
+<p>Метаданные могут присутствовать в таблицах реляционных баз данных, которые часто используются многими организациями. 
+Использование протокола WFS поверх реляционной базы данных позволит извлекать метаданные с помощью стандартных механизмов запроса. 
+Этот тип сбора данных позволяет пользователю задать запрос GetFeature, получить информацию из WFS-объектов и занести ей в шаблон для создания записей метаданных.</p>
+<h2 id="wfs-">Добавление WFS-сборщика</h2>
+<p>WFS реализует операцию запроса GetFeature, которая возвращает данные в виде объектов (обычно строк из таблиц в реляционной базе данных). 
+GeoNetwork, действуя в качестве клиента, может прочитать ответ GetFeature и применить XLST-преобразование для создания фрагментов метаданных, 
+которые можно связать или скопировать в предоставленный пользователем шаблон для создания записей метаданных.</p>
+<p>Доступны следующие опции:</p>
 <ul>
-<li><strong>Site</strong><ul>
-<li><em>Name</em> - This is a short description of the harvester. It will be shown in the harvesting main page as the name for this WFS GetFeature harvester.</li>
-<li><em>Service URL</em> - The bare URL of the WFS service (no OGC params required)</li>
-<li><em>Metadata language</em> - The language that will be used in the metadata records created by the harvester</li>
-<li><em>OGC WFS GetFeature Query</em> - The OGC WFS GetFeature query used to extract features from the WFS.</li>
-<li><em>Schema for output metadata records</em> - choose the metadata schema or profile for the harvested metadata records. Note: only the schemas that have WFS fragment stylesheets will be displayed in the list (see the next option for the location of these stylesheets).<ul>
-<li><em>Stylesheet to create fragments</em> - User-supplied stylesheet that transforms the GetFeature response to a metadata fragments document (see below for the format of that document). Stylesheets exist in the WFSToFragments directory which is in the convert directory of the selected output schema. eg. for the iso19139 schema, this directory is <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments</code>.</li>
-<li><em>Save large response to disk</em> - Check this box if you expect the WFS GetFeature response to be large (eg. greater than 10MB). If checked, the GetFeature response will be saved to disk in a temporary file. Each feature will then be extracted from the temporary file and used to create the fragments and metadata records. If not checked, the response will be held in RAM.</li>
-<li><em>Create subtemplates</em> - Check this box if you want the harvested metadata fragments to be saved as subtemplates in the metadata catalog and xlink'd into the metadata template (see next option). If not checked, the fragments will be copied into the metadata template.</li>
-<li><em>Template to use to build metadata using fragments</em> - Choose the metadata template that will be combined with the harvested metadata fragments to create metadata records. This is a standard GeoNetwork metadata template record.</li>
+<li><strong>Идентификация</strong> - параметры собранных данных в каталоге GeoNetwork.<ul>
+<li><em>Имя</em> - Это краткое описание удаленного сайта. Оно будет показано на главной странице сбора в качестве имени для этого экземпляра CSW-харвестера.</li>
+<li><em>Выбор логотипа</em> - Логотип будет использоваться при отображении собранных записей метаданных в результатах поиска.</li>
+<li><em>Группа</em> - Группа, в которой разместятся собираемые метаданные.</li>
+<li><em>Пользователь</em> - Пользователь, который будет владельцем собранных метаданных.</li>
 </ul>
 </li>
-<li><em>Category for records built with linked fragments</em> - Choose the metadata template that will be combined with the harvested metadata fragments to create metadata records. This is a standard GeoNetwork metadata template record.</li>
+<li><strong>Расписание</strong> - Параметры расписания, согласно которым сборщик будет собирать метаданные.<ul>
+<li><em>Частота</em> - Частота (периодичность) запуска сбора метаданных харвестером.</li>
+<li><em>Только один запуск</em> - Сборщик будет запущен только один раз, если выбран пункт.</li>
 </ul>
 </li>
-<li><strong>Options</strong></li>
-<li><strong>Privileges</strong></li>
-<li><strong>Category for subtemplates</strong> - When fragments are saved to GeoNetwork as subtemplates they will be assigned to the category selected here.</li>
+<li>
+<p><strong>Настроить подключение</strong> - параметры подключения к CSW-серверу.</p>
+<ul>
+<li><em>URL сервиса</em> - URL CSW с параметрами GetCapabilities или без них. Например, <a href="http://geonetwork-site.com/srv/eng/csw?service=CSW&amp;request=GetCabilities&amp;version=2.0.2">http://geonetwork-site.com/srv/eng/csw?service=CSW&amp;request=GetCabilities&amp;version=2.0.2</a>.</li>
+<li><em>Удалённая аутентификация</em> - Учетные данные для базовой HTTP-аутентификации на сервере CSW (Логин и Пароль).</li>
+<li><em>Запрос WFS GetFeature</em> - Запрос OGC WFS GetFeature, используемый для извлечения функций из WFS.</li>
 </ul>
-<h2 id="more-about-turning-the-getfeature-response-into-metadata-fragments">More about turning the GetFeature Response into metadata fragments</h2>
-<p>Within the root <record> element there can be zero to many <record> elements. When generating metadata, each record element will result in the generation of one metadata document, otherwise, the <record> element is used to group metadata fragments as required only (e.g. fragments generated for a dataset or feature).</p>
-<p>Within a <record> element there can be zero to many <fragment> elements and zero to many <replacementGroup> elements. A <replacementGroup> element can itself contain zero to many <fragment> elements. Ordering of <fragment> elements and <replacementGroup> elements within a <record> or <replacementGroup> element is not important.</p>
-<p><fragment> elements contain individual xml fragments. The content of the <fragment> can be any xml element from a supported GeoNetwork schema with the proviso that the element must contain enough relevant metadata to allow the target schema to be identified (i.e. distinguishing namespaces).</p>
-<p><replacementGroup> elements have significance during metadata generation only. They are used to group zero or more fragments for insertion into or creation of links in a copy of the metadata template used to generate the metadata. Where the <replacementGroup> element contains no <fragment> elements, the referenced element in the template copy will be removed, otherwise it will be replaced with the contents of the fragment.</p>
-<p>Valid attributes on these elements and their function is as follows:</p>
+</li>
+<li>
+<p><strong>Обработка ответа wfsfeatures</strong></p>
+<ul>
+<li><em>Проверка записей перед импортом</em> - Проверка записей перед импортом.</li>
+<li><em>Язык</em></li>
+<li><em>Стандарт метаданных</em></li>
+<li><em>Сохранить большой ответ на диск</em> -Установленный флажок означает, что ответ WFS GetFeature будет большим (например, более 10 МБ). Если этот флажок установлен, ответ GetFeature будет сохранен на диске во временном файле. Затем каждый объект будет извлечен из временного файла и использован для создания фрагментов и записей метаданных. Если флажок не установлен, ответ будет храниться в оперативной памяти.</li>
+<li><em>Таблица стилей для создания фрагментов</em> — таблица стилей, предоставляемая пользователем, которая преобразует ответ GetFeature в документ фрагментов метаданных (формат этого документа см. ниже). Таблицы стилей существуют в каталоге WFSToFragments, который находится в каталоге преобразования выбранной выходной схемы. например. для схемы iso19139 это каталог GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments.</li>
+<li><em>Поиск дубликатов ресурсов по идентификатору ресурса</em> - Сравнение выполнено по элементу 'gmd:identificationInfo/<em>/gmd:citation/gmd:CI_Citation/gmd:identifier/</em>/gmd:code/gco:CharacterString'. Оно применимо только к записям по ISO19139 или профилям ISO.</li>
+<li><em>Категория выходных записей метаданных</em></li>
+<li><em>Создать подшаблоны</em> - Создать подшаблоны для каждого объекта WFS.</li>
+<li><em>Выберите шаблон для объединения с фрагментами</em></li>
+</ul>
+</li>
+<li><strong>Доступность для собранных записей</strong> - Назначение привилегий определённым группам по собранным метаданным.<ul>
+<li><em>Если запись существует</em> - Применяется только при обновлении, и если при конфликте UUID предписано задано перезаписывать записи. Если включено, привилегии не удаляются при обновлении.</li>
+</ul>
+</li>
+</ul>
+<h2 id="getfeature">Подробнее о преобразовании ответа GetFeature во фрагменты метаданных</h2>
+<p>Внутри корневого элемента <record> может быть от нуля до множества элементов <record>. 
+При генерации метаданных каждый элемент record приведет к созданию одного документа метаданных. 
+В противном случае элемент <record> используется только для группировки фрагментов метаданных (например, фрагментов, сгенерированных для набора данных или объекта).</p>
+<p>Внутри элемента <record> может быть от нуля до множества элементов <fragment> и от нуля до множества элементов <replacementGroup>. 
+Элемент <replacementGroup> сам может содержать от нуля до множества элементов <fragment>. 
+Порядок расположения элементов <fragment> и <replacementGroup> внутри элемента <record> или <replacementGroup> не важен.</p>
+<p>Элементы <fragment> содержат отдельные xml-фрагменты. Содержимым <fragment> может быть любой xml-элемент из поддерживаемой схемы GeoNetwork при условии, 
+что элемент должен содержать достаточное количество соответствующих метаданных, позволяющих идентифицировать целевую схему (т.е. различать пространства имен).</p>
+<p>Элементы <replacementGroup> имеют значение только при генерации метаданных. 
+Они используются для группировки фрагментов для вставки или создания ссылок в копии шаблона метаданных, используемого для генерации метаданных. 
+Если элемент <replacementGroup> не содержит элементов <fragment>, элемент, на который ссылается копия шаблона, будет удален. 
+В противном случае он будет заменен содержимым фрагмента.</p>
+<p>Допустимые атрибуты этих элементов и их функция заключаются в следующем:</p>
 <table>
 <thead>
 <tr>
-<th>Element</th>
-<th>Attribute</th>
-<th>Description</th>
+<th>Элемент</th>
+<th>Атрибут</th>
+<th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Record</td>
+<td><record></td>
 <td>Uuid</td>
-<td>Uuid of the generated metadata record (optional - one will be assigned by the harvester otherwise)</td>
+<td>Uuid сгенерированной записи метаданных (необязательно - в противном случае она будет назначена сборщиком)</td>
 </tr>
 <tr>
-<td>Fragment</td>
+<td><fragment></td>
 <td>Id</td>
-<td>Id of element in metadata template to replace/link from. Ignored when fragment is within a replacementGroup.</td>
+<td>Идентификатор элемента в шаблоне метаданных для замены/ссылки на него. Игнорируется, если фрагмент находится в группе замены.</td>
 </tr>
 <tr>
 <td></td>
 <td>Uuid</td>
-<td>Uuid to use for generated subtemplate (used to link to this subtemplate from metadata)</td>
+<td>Uuid, который будет использоваться для сгенерированного подшаблона (используется для ссылки на этот подшаблон из метаданных).</td>
 </tr>
 <tr>
 <td></td>
 <td>Title</td>
-<td>Title of fragment -- used as title of xlink</td>
+<td>Заголовок фрагмента - используется в качестве заголовка xlink.</td>
 </tr>
 <tr>
-<td>ReplacementGroup</td>
+<td><replacementGroup></td>
 <td>Id</td>
-<td>Id of element in metadata template to delete, replace or link from to contained fragments</td>
+<td>Идентификатор элемента в шаблоне метаданных, который необходимо удалить, заменить или связать с содержащимися в нем фрагментами.</td>
 </tr>
 </tbody>
 </table>
-<p>Finally, two examples of how to harvest metadata from the Features of an OGC WFS harvester can be given using stylesheets and templates supplied with GeoNetwork.</p>
-<h2 id="bundled-geoserver-boundaries-harvest-example">Bundled GeoServer Boundaries Harvest example</h2>
-<p>This example assumes that you have installed the bundled GeoServer that comes with GeoNetwork. The end result of this example will be 251 ISO19139 metadata records that link in 1506 fragments (6 per record) created from a GetFeature response on the boundaries shapefile in the GeoServer instance supplied with GeoNetwork. The records created contain metadata about the countries of the world.</p>
-<p>The procedure to follow is:</p>
+<p>Ниже представлены 2 примера, как собирать метаданные из функций комбайна OGC WFS, используя таблицы стилей и шаблоны, поставляемые с GeoNetwork.</p>
+<h2 id="_1">Пример сбора данных о границах подключенного геосервера (МАШИННЫЙ ПЕРЕВОД)</h2>
+<p>В этом примере предполагается, что геосервер, который поставляется с GeoNetwork, был подключён. 
+Конечным результатом этого примера будет 251 запись метаданных ISO19139, которые содержат ссылки на 1506 фрагментов (по 6 на запись), 
+созданных из ответа GetFeature для шейп-файла boundaries в экземпляре GeoServer, поставляемом с GeoNetwork. Созданные записи содержат метаданные о странах мира.</p>
+<p>Нужно сделать следующие шаги:</p>
 <ul>
 <li>
-<p>From the Administration-&gt;System Configuration menu, enable the XLink Resolver and <em>Save</em> the configuration to the database.</p>
+<p>В <code>Администрирование</code>-&gt;<code>Настройки</code>-&gt;<code>XLink метаданных</code> включите распознаватель XLink и <em>Сохраните</em> конфигурацию в базе данных.</p>
 </li>
 <li>
-<p>Add an <em>OGC WFS GetFeature response</em> harvester from the Administration-&gt;Harvesting menu.</p>
+<p>Добавьте сборщик <em>OGC WFS GetFeature</em> в меню <code>Администрирование</code>-&gt;<code>Сбор данных</code>.</p>
 </li>
 <li>
-<p>Give it a <em>Name</em> (eg. gboundaries) and enter the URL of the wfs service from the bundled geoserver (eg. <a href="http://localhost:8080/geoserver/wfs">http://localhost:8080/geoserver/wfs</a>) in the <em>Service URL</em> field.</p>
+<p>Присвойте ему <em>Имя</em> (например, gboundaries) и введите URL-адрес службы wfs из подключенного геосервера (например, <a href="http://localhost:8080/geoserver/wfs">http://localhost:8080/geoserver/wfs</a>) в поле <em>URL-адрес службы</em>.</p>
 </li>
 <li>
-<p>We'll use a simple GetFeature query to select all countries from the boundaries shapefile behind the WFS. The XML for such a query (which is to be entered in the <em>GetFeature Query</em> textarea) is:</p>
+<p>Далее будет использован простой запрос GetFeature, чтобы выбрать все страны из шейп-файла boundaries, расположенного за WFS. 
+  XML для такого запроса (который должен быть введен в текстовую область <em>GetFeature Query</em>), является:</p>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;wfs:GetFeature</span><span class="w"> </span><span class="na">service=</span><span class="s">&quot;WFS&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.1.0&quot;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs&quot;</span><span class="nt">&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
@@ -2046,66 +1594,23 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Choose an output schema - we'll choose <em>iso19139</em> as this schema has the example stylesheets and templates we need for this example. Notice that after this option is chosen the following options become visible and we'll take the following actions:</p>
+<p>Выберите схему <em>iso19139</em>, поскольку в этой схеме есть примеры таблиц стилей и шаблонов, которые нужны для этого примера. Обратите внимание, что после выбора этого параметра становятся видны следующие параметры, и мы предпримем следующие действия:</p>
 <ul>
-<li>Choose the supplied 'geoserver_boundary_fragments' stylesheet to extract fragments from the GetFeature response in the <em>Stylesheet to use to create fragments</em> pull-down list. This stylesheet can be found in <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments</code>.</li>
-<li>Select the supplied 'Geoserver WFS Fragments Country Boundaries Test Template' template from the <em>Template to use to build metadata using fragments</em> pull-down list. This template can be found in <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/templates/geoserver_fragment_tester.xml</code>.</li>
+<li>Выберите прилагаемую таблицу стилей "geoserver_boundary_fragments", чтобы извлечь фрагменты из ответа GetFeature в раскрывающемся списке "Таблица стилей", который будет использоваться для создания фрагментов. Эту таблицу стилей можно найти в "GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments`.</li>
+<li>Выберите прилагаемый шаблон "Geoserver WFS Fragments Country Boundaries Test Template" из раскрывающегося списка <em>, который будет использоваться для создания метаданных с использованием фрагментов</em>. Этот шаблон можно найти в разделе "GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/templates/geoserver_fragment_tester.xml`.</li>
 </ul>
 </li>
 <li>
-<p>Choose a category for the records created by the harvester, check the <em>One run only</em> box, add some privileges (simplest is to let All users have View rights). At this stage your harvester entry form should look like the following screenshot.</p>
+<p>Выберите категорию для записей, созданных harvester, установите флажок "Только для одного запуска", добавьте некоторые привилегии (проще всего предоставить всем пользователям права на просмотр). На этом этапе ваша форма заявки на участие в harvester должна выглядеть так, как показано на следующем скриншоте.</p>
 </li>
 <li>
-<p><em>Save</em> the harvester entry form.</p>
+<p><em>Сохраните</em> форму заявки на участие в харвестере.</p>
 </li>
 <li>
-<p>You will be returned to the harvester operations menu where you can <em>Activate</em> the harvester and then <em>Run</em> it.</p>
+<p>Вернитесь в меню "Операции с харвестером", где сможете "Активировать" харвестер, а затем "Запустить" его.</p>
 </li>
 </ul>
-<p>The results page shows that there were 1506 fragments of metadata harvested from the WFS GetFeature response. They were saved to the GeoNetwork database as subtemplates and linked into the metadata template to form 251 new metadata records.</p>
-<h2 id="deegree-version-2x-philosopher-database-example">Deegree Version 2.x Philosopher Database example</h2>
-<p>This example assumes that you have downloaded Deegree version 2.x and loaded the Philosopher example database. The end result of this example will be 7 ISO19139 metadata records that link in 42 fragments (6 per record) created from the GetFeature response from your deegree installation. The records contain metadata about 7 famous philosophers.</p>
-<p>The procedure to follow is:</p>
-<ul>
-<li>
-<p>From the Administration-&gt;System Configuration menu, enable the XLink Resolver and <em>Save</em> the configuration to the database.</p>
-</li>
-<li>
-<p>Add an <em>OGC WFS GetFeature response</em> harvester from the Administration-&gt;Harvesting menu.</p>
-</li>
-<li>
-<p>Give it a <em>Name</em> (eg. deegree22-philosopher-test) and enter the URL of your deegree 2.2 installation in the <em>Service URL</em> field.</p>
-</li>
-<li>
-<p>We'll use a simple GetFeature query to select all philosophers from the database under the WFS. The XML for such a query (which is to be entered in the <em>GetFeature Query</em> textarea) is:</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;wfs:GetFeature</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.1.0&quot;</span><span class="w"> </span><span class="na">xmlns:app=</span><span class="s">&quot;http://www.deegree.org/app&quot;</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">           </span><span class="na">xmlns:wfs=</span><span class="s">&quot;http://www.opengis.net/wfs&quot;</span><span class="nt">&gt;</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">   </span><span class="cm">&lt;!-- request all Philosopher instances --&gt;</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">   </span><span class="nt">&lt;wfs:Query</span><span class="w"> </span><span class="na">typeName=</span><span class="s">&quot;app:Philosopher&quot;</span><span class="nt">/&gt;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nt">&lt;/wfs:GetFeature&gt;</span>
-</span></code></pre></div>
-</li>
-<li>
-<p>Choose an output schema - we'll choose <em>iso19139</em> as this schema has the example stylesheets and templates we need for this example. Notice that after this option is chosen the following options become visible and we'll take the following actions:</p>
-<ul>
-<li>Choose the supplied 'deegree2_philosopher_fragments' stylesheet to extract fragments from the GetFeature response in the <em>Stylesheet to use to create fragments</em> pull-down list. This stylesheet can be found in <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/convert/WFSToFragments</code>.</li>
-<li>Select the supplied 'Deegree 22 WFS Fragments Philosopher Database Test Template' template from the <em>Template to use to build metadata using fragments</em> pull-down list. This template can be found in <code>GEONETWORK_DATA_DIR/config/schema_plugins/iso19139/templates/deegree_fragment_tester.xml</code>.</li>
-</ul>
-</li>
-<li>
-<p>Choose a category for the records created by the harvester, check the <em>One run only</em> box, add some privileges (simplest is to let All users have View rights). At this stage your harvester entry form should look like the following screenshot.</p>
-</li>
-<li>
-<p><em>Save</em> the harvester entry form.</p>
-</li>
-<li>
-<p>You will be returned to the harvester operations menu where you can <em>Activate</em> the harvester and then <em>Run</em> it.</p>
-</li>
-</ul>
-<p>After the harvester has been run you should see a results screen that looks something like the following screenshot.</p>
-<p>The results page shows that there were 42 fragments of metadata harvested from the WFS GetFeature response. They were saved to the GeoNetwork database as subtemplates and linked into the metadata template to form 7 new metadata records.</p>
+<p>На странице результатов показано, что из ответа WFS GetFeature было получено 1506 фрагментов метаданных. Они были сохранены в базе данных GeoNetwork в виде подшаблонов и связаны с шаблоном метаданных для формирования 251 новой записи метаданных.</p>
 
 
 
@@ -2131,7 +1636,7 @@
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
-  Back to top
+  К началу
 </button>
         
       </main>
@@ -2140,33 +1645,33 @@
   
     
       
-      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../harvesting-webdav/" class="md-footer__link md-footer__link--prev" aria-label="Previous: WEBDAV Harvesting">
+          <a href="../harvesting-webdav/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Сбор данных по протоколу WEBDAV">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
             </div>
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Previous
+                Назад
               </span>
               <div class="md-ellipsis">
-                WEBDAV Harvesting
+                Сбор данных по протоколу WEBDAV
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../export/" class="md-footer__link md-footer__link--next" aria-label="Next: Exporting records">
+          <a href="../../export/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Экспорт записей метаданных">
             <div class="md-footer__title">
               <span class="md-footer__direction">
-                Next
+                Вперед
               </span>
               <div class="md-ellipsis">
-                Exporting records
+                Экспорт записей метаданных
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2280,7 +1785,7 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "content.action.edit", "content.code.copy", "content.tabs.link", "navigation.tabs", "navigation.tracking", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.action.view", "content.action.edit", "content.code.copy", "content.tabs.link", "navigation.tabs", "navigation.tracking", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "announce.dismiss"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
